@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { motion } from "motion/react";
 import { useReducedMotion } from "@/lib/use-reduced-motion";
 import { Cat } from "./Cat";
@@ -15,17 +16,18 @@ import { DUR, EASE_OUT, SPRING_SETTLE, SPRING_SNAP } from "@/lib/motion";
  * An active-section pill slides between links (state indication — "where am I?").
  * The cat sits on the pill's edge. It's the nav's only decoration.
  */
-const LINKS = [
+export type NavLink = { href: string; id: string; label: string };
+
+const HOME_LINKS: NavLink[] = [
   { href: "#work", id: "work", label: "Work" },
   { href: "#about", id: "about", label: "About" },
-  { href: "#notes", id: "notes", label: "Notes" },
   { href: "#contact", id: "contact", label: "Contact" },
 ];
 
 const COLLAPSE_AT = 112;
 const EXPAND_AT = 48;
 
-export function Nav() {
+export function Nav({ links = HOME_LINKS }: { links?: NavLink[] }) {
   const reduce = useReducedMotion();
   const [collapsed, setCollapsed] = useState(false);
   const collapsedRef = useRef(false);
@@ -65,7 +67,7 @@ export function Nav() {
   // A hash navigation wins outright until its scroll settles — the thing you
   // just clicked must be the thing that lights up.
   useEffect(() => {
-    const targets = LINKS.map((l) => document.getElementById(l.id)).filter(Boolean) as HTMLElement[];
+    const targets = links.map((l) => document.getElementById(l.id)).filter(Boolean) as HTMLElement[];
     if (!targets.length) return;
     let raf = 0;
     let lockUntil = 0;
@@ -98,7 +100,7 @@ export function Nav() {
       window.removeEventListener("resize", update);
       window.removeEventListener("hashchange", onHash);
     };
-  }, []);
+  }, [links]);
 
   // `open` only means anything while collapsed; expanding resets it implicitly
   const showLinks = !collapsed || open;
@@ -116,14 +118,14 @@ export function Nav() {
           <Cat size={46} />
         </div>
 
-        <a
-          href="#top"
+        <Link
+          href="/"
           className="pressable hoverable t-mono flex h-8 items-center gap-2 rounded-[var(--radius-pill)] border border-transparent pl-[46px] pr-3 text-text"
         >
           <span lang="tr" className="normal-case tracking-[-0.01em] text-[0.875rem] font-semibold font-[family-name:var(--font-display)]">
             Aydın
           </span>
-        </a>
+        </Link>
 
         {showLinks && (
           <motion.ul
@@ -133,7 +135,7 @@ export function Nav() {
             transition={{ duration: DUR.fast, ease: EASE_OUT }}
             className="flex items-center gap-0.5"
           >
-            {LINKS.map((l) => {
+            {links.map((l) => {
               const isActive = active === l.id;
               return (
                 <li key={l.href} className="relative">

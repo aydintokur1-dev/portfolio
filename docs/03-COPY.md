@@ -118,7 +118,7 @@ Eight recommendations, two from people who managed you directly, one from a CEO,
 
 Keep Ivo's exactly as written, beer and emoji included — it does more for "friendly neighborhood" than anything I could write.
 
-Four are in Turkish. **Ship them bilingually with a toggle** rather than translating silently. Honest, warm, and a small piece of craft.
+Three are in Turkish. **Ship them bilingually with a toggle** rather than translating silently. Honest, warm, and a small piece of craft.
 
 Full text of all eight in `05-FACTS.md`.
 

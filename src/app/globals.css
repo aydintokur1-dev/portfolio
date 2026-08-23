@@ -56,8 +56,12 @@
   --radius-lg: 20px;
   --radius-pill: 999px;
 
-  /* layout — LaunchFolio's narrow column with hairlines either side */
-  --column: 720px;
+  /* layout — fixed 1280px content frame; 80px gutters from 1440px up.
+     --rail-gap keeps content off the rails so the hairlines read as a frame
+     rather than an underline on the first character of every row. */
+  --frame: 1280px;
+  --gutter: 1.25rem;
+  --rail-gap: 1rem;
 
   color-scheme: light;
 }
@@ -199,10 +203,22 @@ body {
 }
 .t-wordmark {
   font-family: var(--font-wordmark);
-  font-weight: 800;
-  font-stretch: 112%;       /* only Mona honours this; Unbounded ignores it */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-size: clamp(1.5rem, 2.4vw, 1.875rem);
+}
+/* page titles — bigger than the name, smaller than a billboard */
+.t-h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
   letter-spacing: -0.03em;
-  line-height: 0.92;
+  line-height: 1.05;
+  font-size: clamp(2rem, 4.2vw, 3.25rem);
+  text-wrap: balance;
+}
+.t-h2 {
+  font-size: clamp(1.625rem, 2.9vw, 2.25rem);
 }
 .t-h2 {
   font-family: var(--font-display);
@@ -231,15 +247,26 @@ body {
 }
 
 /* ─────────────────────── layout ─────────────────────── */
-/* The column: everything lives here except the wordmark. */
+/* The frame: max 1280px of content, gutters outside it. */
+/* The outer edge still lands on the rail; --rail-gap holds the content off it. */
 .column {
   width: 100%;
-  max-width: var(--column);
+  max-width: calc(var(--frame) + 2 * var(--gutter));
   margin-inline: auto;
-  padding-inline: 1.25rem;
+  padding-inline: calc(var(--gutter) + var(--rail-gap));
 }
 @media (min-width: 640px) {
-  .column { padding-inline: 2rem; }
+  :root {
+    --gutter: 2rem;
+    --rail-gap: 2.5rem; /* 40px clear of each rail */
+  }
+}
+@media (min-width: 1200px) {
+  :root { --gutter: 5rem; } /* 80px — 1440 viewport ⇒ 1280 frame, 1200 of content */
+}
+/* prose measure inside the wide frame */
+.measure {
+  max-width: 640px;
 }
 /* Hairlines at the column edges, full page height — LaunchFolio's structure. */
 .rails {
@@ -256,11 +283,11 @@ body {
   bottom: 0;
   width: 1px;
   background: var(--border);
-  left: max(1rem, calc(50% - var(--column) / 2));
+  left: max(var(--gutter), calc(50% - var(--frame) / 2));
 }
 .rails::after {
   left: auto;
-  right: max(1rem, calc(50% - var(--column) / 2));
+  right: max(var(--gutter), calc(50% - var(--frame) / 2));
 }
 .hairline {
   border-top: 1px solid var(--border);
@@ -400,3 +427,6 @@ body {
   from { opacity: 0; transform: scale(0.96) translateY(6px); }
   to   { opacity: 1; transform: scale(1) translateY(0); }
 }
+
+/* ───────────────────────────── misc ───────────────────────────── */
+details > summary::-webkit-details-marker { display: none; }

@@ -1,0 +1,445 @@
+{
+ "balkan-transfer": {
+  "cover": "/work/balkan-transfer/cover.webp",
+  "figures": {
+   "cover-big": {
+    "src": "/work/balkan-transfer/cover-big.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "686923542e8ac0b7ca3afa7f_Cover_big.png",
+    "top": null
+   },
+   "analysis-desktop": {
+    "src": "/work/balkan-transfer/analysis-desktop.webp",
+    "width": 1600,
+    "height": 1411,
+    "original": "686928bff9a56751f1788d9e_Analysis_desktop.png",
+    "top": null
+   },
+   "analysis-mobile": {
+    "src": "/work/balkan-transfer/analysis-mobile.webp",
+    "width": 1600,
+    "height": 2344,
+    "original": "686928bfc12af28aa3a77b67_Analysis_mobile.png",
+    "top": null
+   },
+   "user": {
+    "src": "/work/balkan-transfer/user.webp",
+    "width": 1600,
+    "height": 4131,
+    "original": "68692273cb03cdb0d6c2653c_User.png",
+    "top": null
+   },
+   "ia": {
+    "src": "/work/balkan-transfer/ia.webp",
+    "width": 1600,
+    "height": 313,
+    "original": "68692273ba98f993b7f460ca_IA.png",
+    "top": null
+   },
+   "wireframes": {
+    "src": "/work/balkan-transfer/wireframes.webp",
+    "width": 1600,
+    "height": 3795,
+    "original": "6869227322421bae13d2fdf3_Wireframes.png",
+    "top": null
+   },
+   "style-guide": {
+    "src": "/work/balkan-transfer/style-guide.webp",
+    "width": 1600,
+    "height": 2985,
+    "original": "686922730d44c04c71c33da7_Style_guide.png",
+    "top": null
+   },
+   "ui": {
+    "src": "/work/balkan-transfer/ui.webp",
+    "width": 1280,
+    "height": 3308,
+    "original": "68692273353e5c785cd3790e_UI.png",
+    "top": null
+   },
+   "cover-small": {
+    "src": "/work/balkan-transfer/cover-small.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "68692354ff79d8e26e8f158e_Cover_small.png",
+    "top": null
+   }
+  }
+ },
+ "cuckoo": {
+  "cover": "/work/cuckoo/cover.webp",
+  "figures": {
+   "cuckoo-banner": {
+    "src": "/work/cuckoo/cuckoo-banner.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "6536a48e95e16c508408bfdf_Cuckoo-banner.png",
+    "top": null
+   },
+   "fig-2": {
+    "src": "/work/cuckoo/fig-2.webp",
+    "width": 1600,
+    "height": 744,
+    "original": "64fc55b85858957e3a310e4c_2.png",
+    "top": null
+   },
+   "fig-3": {
+    "src": "/work/cuckoo/fig-3.webp",
+    "width": 1600,
+    "height": 1944,
+    "original": "64fc56815858957e3a319f7d_3_(1).png",
+    "top": null
+   },
+   "fig-4": {
+    "src": "/work/cuckoo/fig-4.webp",
+    "width": 1600,
+    "height": 2632,
+    "original": "64fc572f79f83432f66ee601_4_(1).png",
+    "top": null
+   },
+   "fig-5": {
+    "src": "/work/cuckoo/fig-5.webp",
+    "width": 1600,
+    "height": 921,
+    "original": "64fc5809ad4bc0f51d6cda28_5_(1).png",
+    "top": null
+   },
+   "fig-6": {
+    "src": "/work/cuckoo/fig-6.webp",
+    "width": 1600,
+    "height": 472,
+    "original": "64fc590ca1fe9a092b2faaa8_6_(1).png",
+    "top": null
+   },
+   "fig-7": {
+    "src": "/work/cuckoo/fig-7.webp",
+    "width": 1600,
+    "height": 1137,
+    "original": "64fc59ec0a3ae149539e7e2a_7.png",
+    "top": null
+   },
+   "fig-8": {
+    "src": "/work/cuckoo/fig-8.webp",
+    "width": 1600,
+    "height": 582,
+    "original": "64fc5ad2e2c33de3991df25f_8.png",
+    "top": null
+   },
+   "fig-9": {
+    "src": "/work/cuckoo/fig-9.webp",
+    "width": 1600,
+    "height": 504,
+    "original": "64fc5bf1e2c33de3991ee57e_9.png",
+    "top": null
+   },
+   "cuckoo-cover": {
+    "src": "/work/cuckoo/cuckoo-cover.webp",
+    "width": 1392,
+    "height": 704,
+    "original": "6536a3b4563fdaed9ba93ff0_cuckoo_cover.png",
+    "top": null
+   }
+  }
+ },
+ "innos": {
+  "cover": "/work/innos/cover.webp",
+  "figures": {
+   "cover-big": {
+    "src": "/work/innos/cover-big.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "686a5a70548c057ed76ca3b0_Cover_big.png",
+    "top": null
+   },
+   "competitor": {
+    "src": "/work/innos/competitor.webp",
+    "width": 1600,
+    "height": 2951,
+    "original": "686a605448ba3931ec10ab1a_Competitor.png",
+    "top": null
+   },
+   "wireframe": {
+    "src": "/work/innos/wireframe.webp",
+    "width": 1600,
+    "height": 1739,
+    "original": "686a59e3ebcc49cbcf3ae695_Wireframe.png",
+    "top": null
+   },
+   "ui": {
+    "src": "/work/innos/ui.webp",
+    "width": 1600,
+    "height": 1740,
+    "original": "686b7cfc4ea23489e403b848_UI.png",
+    "top": null
+   },
+   "cover-small": {
+    "src": "/work/innos/cover-small.webp",
+    "width": 1392,
+    "height": 704,
+    "original": "686a5a7061d4238ede93cc0f_Cover_small.png",
+    "top": null
+   }
+  }
+ },
+ "morpa": {
+  "cover": "/work/morpa/cover.webp",
+  "figures": {
+   "morpa-ders-banner": {
+    "src": "/work/morpa/morpa-ders-banner.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "6536acc4a204f0002d8644e6_Morpa-ders-banner.png",
+    "top": null
+   },
+   "morpa-ders-2": {
+    "src": "/work/morpa/morpa-ders-2.webp",
+    "width": 1600,
+    "height": 768,
+    "original": "64386b1c5f3d62039bd251df_Morpa_Ders_(2)_1_(1).png",
+    "top": null
+   },
+   "morpa-ders-6": {
+    "src": "/work/morpa/morpa-ders-6.webp",
+    "width": 1600,
+    "height": 1978,
+    "original": "64386b847e8da64f9d243d9e_Morpa_Ders_(6)_1_(1).png",
+    "top": null
+   },
+   "morpa-ders-5": {
+    "src": "/work/morpa/morpa-ders-5.webp",
+    "width": 1600,
+    "height": 1556,
+    "original": "64386b6fdb5adb1f7d43104e_Morpa_Ders_(5)_1_(1).png",
+    "top": null
+   },
+   "morpa-ders-7": {
+    "src": "/work/morpa/morpa-ders-7.webp",
+    "width": 1600,
+    "height": 558,
+    "original": "64386ba8def807cf17af0bc5_Morpa_Ders_(7)_1_(1).png",
+    "top": null
+   },
+   "morpa-ders-9": {
+    "src": "/work/morpa/morpa-ders-9.webp",
+    "width": 1600,
+    "height": 450,
+    "original": "64386bc4dcaeaa06fb5e72b5_Morpa_Ders_(9)_1_(1).png",
+    "top": null
+   },
+   "morpa-ders-8": {
+    "src": "/work/morpa/morpa-ders-8.webp",
+    "width": 1600,
+    "height": 347,
+    "original": "64386bb520aa4782001d6e69_Morpa_Ders_(8)_1_(1).png",
+    "top": null
+   },
+   "group-764": {
+    "src": "/work/morpa/group-764.webp",
+    "width": 1600,
+    "height": 2801,
+    "original": "64386c1ba64c0d8632f3275b_Group_764.png",
+    "top": null
+   },
+   "group-763": {
+    "src": "/work/morpa/group-763.webp",
+    "width": 1600,
+    "height": 3133,
+    "original": "64386ca39262e5563b92e4be_Group_763.png",
+    "top": null
+   },
+   "group-770": {
+    "src": "/work/morpa/group-770.webp",
+    "width": 1280,
+    "height": 2907,
+    "original": "64386d5c7c7bc7546117eb66_Group_770_(1).png",
+    "top": null
+   },
+   "group-771": {
+    "src": "/work/morpa/group-771.webp",
+    "width": 1600,
+    "height": 1283,
+    "original": "64386d406ff53a0b111a80f9_Group_771_(1).png",
+    "top": null
+   },
+   "kampus-banner": {
+    "src": "/work/morpa/kampus-banner.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "6536acc434c4d5ce460525e7_Kampus-banner.png",
+    "top": null
+   },
+   "kampus-2": {
+    "src": "/work/morpa/kampus-2.webp",
+    "width": 1600,
+    "height": 2172,
+    "original": "6438717c317e67bbac7f82fa_Kampus-2_(1).png",
+    "top": null
+   },
+   "kampus-3": {
+    "src": "/work/morpa/kampus-3.webp",
+    "width": 1280,
+    "height": 5178,
+    "original": "6438718ae5f2eec8329d05f5_Kampus-3_(1).png",
+    "top": "/work/morpa/kampus-3-top.webp"
+   }
+  }
+ },
+ "visit-montenegro": {
+  "cover": "/work/visit-montenegro/cover.webp",
+  "figures": {
+   "visit-monte": {
+    "src": "/work/visit-montenegro/visit-monte.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "6536ae5f563fdaed9bb47989_visit-monte.png",
+    "top": null
+   },
+   "image1": {
+    "src": "/work/visit-montenegro/image1.webp",
+    "width": 1600,
+    "height": 1172,
+    "original": "64fd72b0666d45a0553c5307_image1.png",
+    "top": null
+   },
+   "image2": {
+    "src": "/work/visit-montenegro/image2.webp",
+    "width": 1600,
+    "height": 916,
+    "original": "64fd72b0dedbc38e5b24aa12_image2.png",
+    "top": null
+   },
+   "image3": {
+    "src": "/work/visit-montenegro/image3.webp",
+    "width": 1600,
+    "height": 916,
+    "original": "64fd72b0fbf503c81309cf46_image3.png",
+    "top": null
+   },
+   "image4": {
+    "src": "/work/visit-montenegro/image4.webp",
+    "width": 1600,
+    "height": 916,
+    "original": "64fd72af4ceea7b72ac40599_image4.png",
+    "top": null
+   },
+   "image5": {
+    "src": "/work/visit-montenegro/image5.webp",
+    "width": 1600,
+    "height": 372,
+    "original": "64fd72af1a7e3b2076356d9a_image5.png",
+    "top": null
+   }
+  }
+ },
+ "about": {
+  "portrait": {
+   "src": "/about/portrait.webp",
+   "width": 728,
+   "height": 686
+  }
+ },
+ "volgen": {
+  "cover": "/work/volgen/cover.webp",
+  "figures": {
+   "hero": {
+    "src": "/work/volgen/hero.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-hero-desktop.png",
+    "top": null
+   },
+   "pills-settle": {
+    "src": "/work/volgen/pills-settle.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-popcorn-pills-settle-desktop.png",
+    "top": null
+   },
+   "pills-drag": {
+    "src": "/work/volgen/pills-drag.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-popcorn-pills-drag-desktop.png",
+    "top": null
+   },
+   "pills-1": {
+    "src": "/work/volgen/pills-1.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-popcorn-pills-1-desktop.png",
+    "top": null
+   },
+   "pills-3": {
+    "src": "/work/volgen/pills-3.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-popcorn-pills-3-desktop.png",
+    "top": null
+   },
+   "works-grid": {
+    "src": "/work/volgen/works-grid.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-works-grid-desktop.png",
+    "top": null
+   },
+   "services": {
+    "src": "/work/volgen/services.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-services-desktop.png",
+    "top": null
+   },
+   "about-home": {
+    "src": "/work/volgen/about-home.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-about-desktop.png",
+    "top": null
+   },
+   "script-to-screen": {
+    "src": "/work/volgen/script-to-screen.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-script-to-screen-desktop.png",
+    "top": null
+   },
+   "nav-scrolled": {
+    "src": "/work/volgen/nav-scrolled.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-scroll-01-nav-desktop.png",
+    "top": null
+   },
+   "about-story": {
+    "src": "/work/volgen/about-story.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-about-our-story-desktop.png",
+    "top": null
+   },
+   "about-team": {
+    "src": "/work/volgen/about-team.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-about-team-desktop.png",
+    "top": null
+   },
+   "hero-mobile": {
+    "src": "/work/volgen/hero-mobile.webp",
+    "width": 780,
+    "height": 1688,
+    "original": "volgen-home-hero-mobile.png",
+    "top": null
+   },
+   "services-mobile": {
+    "src": "/work/volgen/services-mobile.webp",
+    "width": 780,
+    "height": 1688,
+    "original": "volgen-home-services-mobile.png",
+    "top": null
+   }
+  }
+ }
+}

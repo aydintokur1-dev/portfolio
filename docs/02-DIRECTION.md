@@ -83,7 +83,7 @@ Building dark only for now, per your brief. But **structure the tokens for both 
 
 Cut: Akbank, She Ventures (or rewrite She Ventures completely — see `03-COPY.md`).
 
-**Testimonials get their own section.** Eight recommendations, two from people who managed you directly, one from a CEO, one from your current PM naming shipped surfaces. Almost no portfolio at your level has this. Half are in Turkish — ship them bilingually with a toggle. That's simultaneously honest, warm, and a small piece of engineering craft.
+**Testimonials get their own section.** Eight recommendations, two from people who managed you directly, one from a CEO, one from your current PM naming shipped surfaces. Almost no portfolio at your level has this. Three are in Turkish — ship them bilingually with a toggle. That's simultaneously honest, warm, and a small piece of engineering craft.
 
 ---
 

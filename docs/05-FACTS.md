@@ -95,7 +95,7 @@ _EN: "Aydın and I worked together for 6–8 months and completed several projec
 ### Nilay Kıratlı — Motion Graphic / UI & UX Designer · 15 Jan 2024 _(Turkish)_
 > "Aydın yenilikleri takip eden, sürekli kendini geliştiren, edindiği bilgileri iş arkadaşlarıyla paylaşan işinde disiplinli ve başarılı bir çalışma arkadaşı. Onunla çalışmak gerçekten çok keyifli."
 
-**Note:** four recommendations are in Turkish. Ship them bilingually — original + English, with a small toggle. That's a design-engineering detail *and* it's honest, and it quietly signals you ship bilingual products (Volgen already is).
+**Note:** three recommendations are in Turkish. Ship them bilingually — original + English, with a small toggle. That's a design-engineering detail *and* it's honest, and it quietly signals you ship bilingual products (Volgen already is).
 
 ---
 
