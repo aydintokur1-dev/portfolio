@@ -5,36 +5,41 @@
    is semantic so light is one block here later, not a refactor.
    Palette rationale: docs/02-DIRECTION.md, docs/08-REFERENCES.md
    ───────────────────────────────────────────────────────────── */
+/* LIGHT — the shipped theme. Warm paper, not clinical white. */
 :root {
-  /* surfaces — warm near-black, not blue-black */
-  --bg: #151310;
-  --bg-grid: rgba(243, 239, 231, 0.045);
-  --surface: #1d1a16;
-  --surface-2: #27231d;
-  --border: rgba(243, 239, 231, 0.09);
-  --border-strong: rgba(243, 239, 231, 0.16);
+  --bg: #faf9f6;
+  --bg-grid: rgba(21, 19, 16, 0.055);
+  --surface: #ffffff;
+  --surface-2: #f1efe9;
+  --border: rgba(21, 19, 16, 0.09);
+  --border-strong: rgba(21, 19, 16, 0.18);
 
-  /* text — cream inverted, never pure white */
-  --text: #f3efe7;
-  --text-muted: #a8a195;
-  --text-faint: #6e675c;
+  --text: #151310;
+  --text-muted: #6f6a61;
+  --text-faint: #a39d92;
 
-  /* one accent, used with discipline */
-  --accent: #ffb070;
+  /* one accent, used with discipline. CTAs are ink, not accent. */
+  --accent: #f08a3c;
   --accent-ink: #2a1606;
-  --accent-glow: rgba(255, 176, 112, 0.18);
+  --accent-glow: rgba(240, 138, 60, 0.2);
+  --ink: #151310;
+  --ink-text: #faf9f6;
 
-  /* Creatie's pastel system, rebuilt as tints on dark. Each has a dot. */
-  --tint-blue: rgba(156, 196, 234, 0.14);
-  --tint-blue-dot: #9cc4ea;
-  --tint-yellow: rgba(232, 213, 122, 0.14);
-  --tint-yellow-dot: #e8d57a;
-  --tint-green: rgba(154, 217, 168, 0.14);
-  --tint-green-dot: #9ad9a8;
-  --tint-lavender: rgba(195, 179, 230, 0.14);
-  --tint-lavender-dot: #c3b3e6;
-  --tint-pink: rgba(240, 168, 192, 0.14);
-  --tint-pink-dot: #f0a8c0;
+  /* Creatie's pastels, the originals — they were designed for paper */
+  --tint-blue: #dde9f6;
+  --tint-blue-dot: #3d8bdc;
+  --tint-yellow: #f5efc4;
+  --tint-yellow-dot: #c9a227;
+  --tint-green: #dff4e3;
+  --tint-green-dot: #3aa65b;
+  --tint-lavender: #ece7f5;
+  --tint-lavender-dot: #7d5fc9;
+  --tint-pink: #f9e3ec;
+  --tint-pink-dot: #d8558a;
+
+  --glass-bg: rgba(255, 255, 255, 0.74);
+  --glass-edge: rgba(255, 255, 255, 0.9);
+  --glass-shadow: 0 10px 30px -14px rgba(21, 19, 16, 0.25);
 
   /* motion — docs/07-MOTION.md. Built-in easings are too weak. */
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
@@ -47,10 +52,45 @@
 
   /* geometry — roundness is most of the friendliness */
   --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 22px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
   --radius-pill: 999px;
 
+  /* layout — LaunchFolio's narrow column with hairlines either side */
+  --column: 720px;
+
+  color-scheme: light;
+}
+
+/* DARK — kept, unwired. One block; nothing else changes. */
+[data-theme="dark"] {
+  --bg: #151310;
+  --bg-grid: rgba(243, 239, 231, 0.045);
+  --surface: #1d1a16;
+  --surface-2: #27231d;
+  --border: rgba(243, 239, 231, 0.09);
+  --border-strong: rgba(243, 239, 231, 0.16);
+  --text: #f3efe7;
+  --text-muted: #a8a195;
+  --text-faint: #6e675c;
+  --accent: #ffb070;
+  --accent-ink: #2a1606;
+  --accent-glow: rgba(255, 176, 112, 0.18);
+  --ink: #f3efe7;
+  --ink-text: #151310;
+  --tint-blue: rgba(156, 196, 234, 0.14);
+  --tint-blue-dot: #9cc4ea;
+  --tint-yellow: rgba(232, 213, 122, 0.14);
+  --tint-yellow-dot: #e8d57a;
+  --tint-green: rgba(154, 217, 168, 0.14);
+  --tint-green-dot: #9ad9a8;
+  --tint-lavender: rgba(195, 179, 230, 0.14);
+  --tint-lavender-dot: #c3b3e6;
+  --tint-pink: rgba(240, 168, 192, 0.14);
+  --tint-pink-dot: #f0a8c0;
+  --glass-bg: rgba(29, 26, 22, 0.72);
+  --glass-edge: rgba(243, 239, 231, 0.06);
+  --glass-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
   color-scheme: dark;
 }
 
@@ -65,6 +105,8 @@
   --color-text-faint: var(--text-faint);
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
+  --color-ink: var(--ink);
+  --color-ink-text: var(--ink-text);
 
   --font-display: var(--font-mona), system-ui, sans-serif;
   --font-display-alt: var(--font-unbounded), system-ui, sans-serif;
@@ -86,6 +128,9 @@
 html {
   background: var(--bg);
   color: var(--text);
+  /* anchors glide instead of teleporting; fixed nav pill never covers a heading */
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
   font-family: var(--font-sans);
   font-size: 100%;
   line-height: 1.5;
@@ -103,6 +148,10 @@ body {
 ::selection {
   background: var(--accent);
   color: var(--accent-ink);
+}
+.btn-ink {
+  background: var(--ink);
+  color: var(--ink-text);
 }
 
 :focus-visible {
@@ -152,29 +201,69 @@ body {
   font-family: var(--font-wordmark);
   font-weight: 800;
   font-stretch: 112%;       /* only Mona honours this; Unbounded ignores it */
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
   line-height: 0.92;
 }
 .t-h2 {
   font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.02;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
   text-wrap: balance;
 }
 .t-mono {
   font-family: var(--font-mono);
   font-weight: 500;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-variant-numeric: tabular-nums;
 }
 .t-body {
-  font-size: 1.0625rem;
-  line-height: 1.55;
-  letter-spacing: -0.005em;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  letter-spacing: -0.004em;
   text-wrap: pretty;
+}
+.t-small {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+/* ─────────────────────── layout ─────────────────────── */
+/* The column: everything lives here except the wordmark. */
+.column {
+  width: 100%;
+  max-width: var(--column);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 640px) {
+  .column { padding-inline: 2rem; }
+}
+/* Hairlines at the column edges, full page height — LaunchFolio's structure. */
+.rails {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.rails::before,
+.rails::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+  left: max(1rem, calc(50% - var(--column) / 2));
+}
+.rails::after {
+  left: auto;
+  right: max(1rem, calc(50% - var(--column) / 2));
+}
+.hairline {
+  border-top: 1px solid var(--border);
 }
 
 /* ─────────────────────── interaction ─────────────────────── */
@@ -198,16 +287,25 @@ body {
 /* ─────────────────────── accessibility ─────────────────────── */
 /* Fewer and gentler, not zero. Opacity stays; movement goes. */
 @media (prefers-reduced-motion: reduce) {
+  /* Movement goes; opacity and colour feedback stay, just quicker. */
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-property: opacity, color, background-color, border-color !important;
+    transition-duration: 160ms !important;
+  }
+  html {
     scroll-behavior: auto !important;
   }
   .pressable:active {
     transform: none;
+  }
+  /* blur-reveal words: opacity may still fade, but no blur and no travel */
+  .reveal-word {
+    filter: none !important;
+    transform: none !important;
   }
 }
 
@@ -228,13 +326,13 @@ body {
 
 /* Translucent chrome — content scrolls underneath. */
 .glass {
-  background: rgba(29, 26, 22, 0.72);
+  background: var(--glass-bg);
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
   border: 1px solid var(--border);
   box-shadow:
-    inset 0 1px 0 rgba(243, 239, 231, 0.06),
-    0 10px 30px -12px rgba(0, 0, 0, 0.6);
+    inset 0 1px 0 var(--glass-edge),
+    var(--glass-shadow);
 }
 
 /* ─────────────────────────── the cat ─────────────────────────── */
@@ -244,18 +342,27 @@ body {
 }
 .cat-eyes {
   transform-origin: 24px 23px;
-  animation: cat-blink 5.2s infinite;
+  animation: cat-blink 9s infinite;
+  /* waking is snappy */
+  transition: opacity 180ms var(--ease-out);
 }
 .cat-eyes-closed {
   opacity: 0;
-  transition: opacity 240ms var(--ease-out);
+  transition: opacity 180ms var(--ease-out);
 }
+/* falling asleep is deliberate — slow */
 .cat[data-asleep] .cat-eyes {
   opacity: 0;
   animation: none;
+  transition-duration: 600ms;
 }
 .cat[data-asleep] .cat-eyes-closed {
   opacity: 1;
+  transition-duration: 600ms;
+}
+/* the wake-up stretch: rare, so it gets the delight budget */
+.cat[data-stretch] {
+  animation: cat-stretch 360ms var(--ease-out);
 }
 .cat-tail {
   transform-origin: 36px 40px;
@@ -264,16 +371,22 @@ body {
 .cat[data-asleep] .cat-tail {
   animation-duration: 7s;
 }
+/* two blinks per cycle at uneven offsets — metronomic blinking reads as a machine */
 @keyframes cat-blink {
-  0%, 92%, 100% { transform: scaleY(1); }
-  95% { transform: scaleY(0.08); }
+  0%, 38%, 42%, 71%, 74%, 100% { transform: scaleY(1); }
+  40%, 72.5% { transform: scaleY(0.08); }
+}
+@keyframes cat-stretch {
+  0% { transform: scaleY(1); }
+  45% { transform: scaleY(1.07) translateY(-1px); }
+  100% { transform: scaleY(1); }
 }
 @keyframes cat-tail {
   0%, 100% { transform: rotate(0deg); }
   50% { transform: rotate(-14deg); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .cat-eyes, .cat-tail { animation: none; }
+  .cat-eyes, .cat-tail, .cat[data-stretch] { animation: none; }
 }
 
 /* ─────────────────────────── entrances ─────────────────────────── */

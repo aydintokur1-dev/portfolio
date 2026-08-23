@@ -44,7 +44,11 @@ Your own instinct is already here — *"popcorn-style text pills… moving fast 
 
 ---
 
-## Visual direction — dark first
+## Visual direction — light first (changed 23 Aug, evening)
+
+> **Update:** Aydın reversed the theme call — **light ships first**, dark stays as a token block. Also: the references are *clean and small* — one big element (the wordmark), everything else inside a ~720px column with hairline rails, LaunchFolio-style. The rest of this section predates that and is kept for the reasoning.
+
+### (superseded) dark first
 
 Building dark only for now, per your brief. But **structure the tokens for both from day one** — every color defined as a semantic variable (`--surface`, `--text-primary`, `--accent`), never a raw hex in a component. Light theme then becomes one file, later, instead of a refactor. A design-systems person shipping a theme that can't be re-themed is a bad look.
 

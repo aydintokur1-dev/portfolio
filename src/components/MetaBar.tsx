@@ -10,7 +10,7 @@ export function MetaBar() {
       <span className="flex items-center gap-2 whitespace-nowrap text-text">
         <span
           aria-hidden
-          className="inline-block size-1.5 rounded-full bg-[#9ad9a8] shadow-[0_0_0_3px_rgba(154,217,168,0.18)]"
+          className="inline-block size-1.5 rounded-full bg-[var(--tint-green-dot)] shadow-[0_0_0_3px_var(--tint-green)]"
         />
         Open to work
       </span>

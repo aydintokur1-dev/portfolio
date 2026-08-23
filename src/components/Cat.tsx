@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from "motion/react";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import { useReducedMotion } from "@/lib/use-reduced-motion";
+import { SPRING_ALIVE } from "@/lib/motion";
 
 /**
  * Placeholder cat. Stands in for the Rive character (docs/06-CAT.md) so the
  * interaction can be felt now: eyes + head follow the cursor through a spring,
- * it blinks, and it falls asleep after ~20s without input.
+ * it blinks (irregularly), falls asleep after ~20s without input — slowly,
+ * because falling asleep is deliberate — and wakes fast, with a stretch.
  *
  * Decorative: aria-hidden, no pointer events, never in the tab order.
  * Reduced motion: static, eyes open, no tracking.
@@ -15,34 +18,54 @@ export function Cat({ size = 48 }: { size?: number }) {
   const reduce = useReducedMotion();
   const ref = useRef<SVGSVGElement>(null);
   const [asleep, setAsleep] = useState(false);
+  const [stretching, setStretching] = useState(false);
 
   // raw pointer vector → spring → pupil/head offsets. Direct binding feels
   // mechanical; the spring is what makes it read as alive (docs/07-MOTION.md).
   const px = useMotionValue(0);
   const py = useMotionValue(0);
-  const spring = { stiffness: 140, damping: 16, mass: 0.6 };
-  const eyeX = useSpring(px, spring);
-  const eyeY = useSpring(py, spring);
+  const eyeX = useSpring(px, SPRING_ALIVE);
+  const eyeY = useSpring(py, SPRING_ALIVE);
 
   useEffect(() => {
     if (reduce) return;
     let idle: ReturnType<typeof setTimeout>;
+    let stretchTimer: ReturnType<typeof setTimeout>;
+    let wasAsleep = false;
     const wake = () => {
+      if (wasAsleep) {
+        // a real wake-up: brief stretch, then settle (rare → delight tier)
+        setStretching(true);
+        clearTimeout(stretchTimer);
+        stretchTimer = setTimeout(() => setStretching(false), 360);
+      }
+      wasAsleep = false;
       setAsleep(false);
       clearTimeout(idle);
-      idle = setTimeout(() => setAsleep(true), 20000);
+      idle = setTimeout(() => {
+        wasAsleep = true;
+        setAsleep(true);
+      }, 20000);
     };
+    // one layout read per frame, not per pointer event
+    let raf = 0;
+    let last: { x: number; y: number } | null = null;
     const onMove = (e: PointerEvent) => {
-      const el = ref.current;
-      if (!el) return;
-      const r = el.getBoundingClientRect();
-      const dx = e.clientX - (r.left + r.width / 2);
-      const dy = e.clientY - (r.top + r.height * 0.42);
-      const d = Math.hypot(dx, dy) || 1;
-      // ease-in on distance so nearby cursor moves feel gentle
-      const k = Math.min(1, d / 260);
-      px.set((dx / d) * k);
-      py.set((dy / d) * k);
+      last = { x: e.clientX, y: e.clientY };
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const el = ref.current;
+        if (!el || !last) return;
+        const r = el.getBoundingClientRect();
+        const dx = last.x - (r.left + r.width / 2);
+        const dy = last.y - (r.top + r.height * 0.42);
+        const d = Math.hypot(dx, dy) || 1;
+        // ease-in on distance so nearby cursor moves feel gentle
+        const k = Math.min(1, d / 260);
+        px.set((dx / d) * k);
+        py.set((dy / d) * k);
+      });
       wake();
     };
     window.addEventListener("pointermove", onMove, { passive: true });
@@ -51,6 +74,8 @@ export function Cat({ size = 48 }: { size?: number }) {
     wake();
     return () => {
       clearTimeout(idle);
+      clearTimeout(stretchTimer);
+      cancelAnimationFrame(raf);
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("scroll", wake);
       window.removeEventListener("keydown", wake);
@@ -72,6 +97,7 @@ export function Cat({ size = 48 }: { size?: number }) {
       viewBox="0 0 48 48"
       className="cat pointer-events-none select-none overflow-visible"
       data-asleep={asleep || undefined}
+      data-stretch={stretching || undefined}
       style={{ rotate: headTilt }}
     >
       {/* tail */}

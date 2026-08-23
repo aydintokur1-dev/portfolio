@@ -18,12 +18,12 @@ export function Sticker({
 }) {
   return (
     <span
-      className={`t-mono inline-flex items-center gap-2 rounded-[var(--radius-pill)] border px-3 py-1.5 text-text ${className}`}
+      className={`t-mono inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border px-2.5 py-1 text-text ${className}`}
       style={{
         background: `var(--tint-${tint})`,
-        borderColor: `color-mix(in oklab, var(--tint-${tint}-dot) 28%, transparent)`,
+        borderColor: `color-mix(in oklab, var(--tint-${tint}-dot) 22%, transparent)`,
         transform: tilt ? `rotate(${tilt}deg)` : undefined,
-        boxShadow: "inset 0 1px 0 rgba(243,239,231,0.06)",
+        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.5)",
       }}
     >
       <span
