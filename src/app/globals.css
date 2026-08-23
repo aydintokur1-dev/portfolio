@@ -1,0 +1,289 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────
+   Tokens. Dark is the only theme shipped for now, but every colour
+   is semantic so light is one block here later, not a refactor.
+   Palette rationale: docs/02-DIRECTION.md, docs/08-REFERENCES.md
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* surfaces — warm near-black, not blue-black */
+  --bg: #151310;
+  --bg-grid: rgba(243, 239, 231, 0.045);
+  --surface: #1d1a16;
+  --surface-2: #27231d;
+  --border: rgba(243, 239, 231, 0.09);
+  --border-strong: rgba(243, 239, 231, 0.16);
+
+  /* text — cream inverted, never pure white */
+  --text: #f3efe7;
+  --text-muted: #a8a195;
+  --text-faint: #6e675c;
+
+  /* one accent, used with discipline */
+  --accent: #ffb070;
+  --accent-ink: #2a1606;
+  --accent-glow: rgba(255, 176, 112, 0.18);
+
+  /* Creatie's pastel system, rebuilt as tints on dark. Each has a dot. */
+  --tint-blue: rgba(156, 196, 234, 0.14);
+  --tint-blue-dot: #9cc4ea;
+  --tint-yellow: rgba(232, 213, 122, 0.14);
+  --tint-yellow-dot: #e8d57a;
+  --tint-green: rgba(154, 217, 168, 0.14);
+  --tint-green-dot: #9ad9a8;
+  --tint-lavender: rgba(195, 179, 230, 0.14);
+  --tint-lavender-dot: #c3b3e6;
+  --tint-pink: rgba(240, 168, 192, 0.14);
+  --tint-pink-dot: #f0a8c0;
+
+  /* motion — docs/07-MOTION.md. Built-in easings are too weak. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --dur-press: 120ms;
+  --dur-fast: 160ms;
+  --dur-base: 220ms;
+  --dur-slow: 320ms;
+
+  /* geometry — roundness is most of the friendliness */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+
+  --font-display: var(--font-mona), system-ui, sans-serif;
+  --font-display-alt: var(--font-unbounded), system-ui, sans-serif;
+  /* THE SWITCH: which face the wordmark uses. Headings stay on Mona Sans. */
+  --font-wordmark: var(--font-unbounded), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-dm-mono), ui-monospace, monospace;
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-pill: var(--radius-pill);
+
+  --ease-out: var(--ease-out);
+  --ease-in-out: var(--ease-in-out);
+}
+
+/* ───────────────────────────── base ───────────────────────────── */
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 100%;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100dvh;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Creatie's graph paper, inverted. Faint on purpose. Lives on a pseudo-element
+   so the fade-out mask touches the grid only, never the content. */
+.paper {
+  position: relative;
+  isolation: isolate;
+}
+.paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--bg-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center top;
+  mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
+}
+
+/* ─────────────────────── type utilities ─────────────────────── */
+/* Tracking is size-specific, never one value. docs/07-MOTION.md */
+.t-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 112%;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  text-wrap: balance;
+}
+.t-display-alt {
+  font-family: var(--font-display-alt);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+.t-wordmark {
+  font-family: var(--font-wordmark);
+  font-weight: 800;
+  font-stretch: 112%;       /* only Mona honours this; Unbounded ignores it */
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+}
+.t-h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.t-mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+.t-body {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+  text-wrap: pretty;
+}
+
+/* ─────────────────────── interaction ─────────────────────── */
+/* Every pressable confirms the press. */
+.pressable {
+  transition: transform var(--dur-press) var(--ease-out), background-color var(--dur-fast) ease,
+    border-color var(--dur-fast) ease, color var(--dur-fast) ease;
+}
+.pressable:active {
+  transform: scale(0.97);
+}
+
+/* Hover only where a real pointer exists. Touch fires hover on tap. */
+@media (hover: hover) and (pointer: fine) {
+  .hoverable:hover {
+    background-color: var(--surface-2);
+    border-color: var(--border-strong);
+  }
+}
+
+/* ─────────────────────── accessibility ─────────────────────── */
+/* Fewer and gentler, not zero. Opacity stays; movement goes. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .pressable:active {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass {
+    backdrop-filter: none !important;
+    background: var(--surface) !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --border: rgba(243, 239, 231, 0.28);
+    --border-strong: rgba(243, 239, 231, 0.45);
+    --text-muted: #cfc8bb;
+  }
+}
+
+/* Translucent chrome — content scrolls underneath. */
+.glass {
+  background: rgba(29, 26, 22, 0.72);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid var(--border);
+  box-shadow:
+    inset 0 1px 0 rgba(243, 239, 231, 0.06),
+    0 10px 30px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* ─────────────────────────── the cat ─────────────────────────── */
+/* Placeholder states until the Rive character lands (docs/06-CAT.md). */
+.cat {
+  transform-origin: 50% 70%;
+}
+.cat-eyes {
+  transform-origin: 24px 23px;
+  animation: cat-blink 5.2s infinite;
+}
+.cat-eyes-closed {
+  opacity: 0;
+  transition: opacity 240ms var(--ease-out);
+}
+.cat[data-asleep] .cat-eyes {
+  opacity: 0;
+  animation: none;
+}
+.cat[data-asleep] .cat-eyes-closed {
+  opacity: 1;
+}
+.cat-tail {
+  transform-origin: 36px 40px;
+  animation: cat-tail 3.4s ease-in-out infinite;
+}
+.cat[data-asleep] .cat-tail {
+  animation-duration: 7s;
+}
+@keyframes cat-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.08); }
+}
+@keyframes cat-tail {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-14deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cat-eyes, .cat-tail { animation: none; }
+}
+
+/* ─────────────────────────── entrances ─────────────────────────── */
+/* Kirk's wordmark scale-in, measured 0.96 → 1. CSS so it survives page load.
+   Nothing appears from nothing: starts visible-ish, not from scale(0). */
+.enter-scale {
+  animation: enter-scale 640ms var(--ease-out) both;
+  transform-origin: 0% 100%;
+}
+@keyframes enter-scale {
+  from { opacity: 0; transform: scale(0.96) translateY(6px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
