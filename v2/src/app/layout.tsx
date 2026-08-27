@@ -54,7 +54,25 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${archivo.variable} ${instrument.variable} ${jetbrains.variable}`}>
+    <html
+      lang="en"
+      className={`${archivo.variable} ${instrument.variable} ${jetbrains.variable}`}
+      // The Safari script below adds an attribute before hydration; this
+      // keeps React from reporting it (one element deep, same as next-themes).
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Safari flag for the stylesheet, set before first paint so the cheaper
+            motion below never flashes the expensive version first. Same test
+            as `lib/ua.ts`. A data attribute rather than a class: React does
+            not own it, so hydration leaves it alone. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "if(/^((?!chrome|chromium|crios|fxios|edg|android).)*safari/i.test(navigator.userAgent))document.documentElement.setAttribute('data-safari','')",
+          }}
+        />
+      </head>
       <body className="min-h-svh">
         <SmoothScroll />
         <AnchorNav />

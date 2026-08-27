@@ -32,9 +32,14 @@ const slotsOf = (row) => row?.firstElementChild?.children;
 // slower than the blur climbs, so the word still carries alpha well into its
 // smear — without that there is nothing for the threshold to weld the other
 // one to. Applied per word, not per row, so a held word can be left alone.
-function fade(el, f, blur) {
+function fade(el, f, blur, plain) {
   if (!el) return;
-  if (f >= 1) {
+  if (plain) {
+    // No filter at all: a straight crossfade for engines that rasterise
+    // blurred text on the CPU (Safari — measured at 20fps with the melt).
+    el.style.filter = "none";
+    el.style.opacity = `${f}`;
+  } else if (f >= 1) {
     el.style.filter = "none";
     el.style.opacity = "1";
   } else if (f <= 0) {
@@ -48,7 +53,7 @@ function fade(el, f, blur) {
   }
 }
 
-function createGroup(side, groups, params) {
+function createGroup(side, groups, params, plain) {
   const m = { t: 1 };
   // What is on screen, and which of it the morph in flight is moving. Both
   // rows are rewritten on every change rather than trading places: a word can
@@ -67,8 +72,8 @@ function createGroup(side, groups, params) {
 
     for (let j = 0; j < SLOTS; j++) {
       if (moving[j]) {
-        fade(out?.[j], 1 - t, params.nameBlur);
-        fade(into?.[j], t, params.nameBlur);
+        fade(out?.[j], 1 - t, params.nameBlur, plain);
+        fade(into?.[j], t, params.nameBlur, plain);
         if (held?.[j]) held[j].style.opacity = "0";
       } else {
         if (out?.[j]) out[j].style.opacity = "0";
@@ -82,7 +87,9 @@ function createGroup(side, groups, params) {
     // type that is set and type that is stamped.
     if (g.goo) {
       g.goo.style.filter =
-        t >= 1 ? "none" : `url(#name-goo) blur(${params.nameSoften}px)`;
+        t >= 1 || plain
+          ? "none"
+          : `url(#name-goo) blur(${params.nameSoften}px)`;
     }
   };
 
@@ -140,10 +147,10 @@ function createGroup(side, groups, params) {
  * refs: { groups, list, loader, cut, live } — DOM handed over from the
  * component. `groups` is the shape the JSX populates, one entry per side.
  */
-export function createMeta(refs, params) {
+export function createMeta(refs, params, { plain = false } = {}) {
   const { groups, list, loader, cut, live } = refs;
-  const left = createGroup("left", groups, params);
-  const right = createGroup("right", groups, params);
+  const left = createGroup("left", groups, params, plain);
+  const right = createGroup("right", groups, params, plain);
 
   // Only the alpha row does any work; colour passes straight through.
   const setThreshold = () => {

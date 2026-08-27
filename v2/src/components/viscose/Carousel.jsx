@@ -16,6 +16,7 @@ import { createSplitText } from "./ring/splitText";
 import { createTag, TAG_W, TAG_H } from "./ring/tag";
 import { defaultParams } from "./ring/params";
 import { PROJECTS } from "./ring/projects";
+import { isSafari } from "@/lib/ua";
 import {
   TAU,
   HALF_PI,
@@ -126,7 +127,15 @@ export default function Carousel({ onOpen }) {
       console.error("[ring] could not create a WebGL context:", err);
       return;
     }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    // The plane pass is a full-viewport SDF per frame, so pixels are the
+    // cost. Safari's WebGL runs it noticeably slower than Blink's, so it
+    // starts a step lower; either way the frame loop steps the ratio down
+    // further if frames keep running long, never back up (a ratio that
+    // flickers between two sharpnesses is worse than one that is slightly
+    // soft).
+    const safari = isSafari();
+    let dprCap = Math.min(window.devicePixelRatio, safari ? 1.5 : 2);
+    renderer.setPixelRatio(dprCap);
     container.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
@@ -221,6 +230,9 @@ export default function Carousel({ onOpen }) {
         live: liveRef.current,
       },
       params,
+      // Safari rasterises the goo filter and the word blur on the CPU every
+      // frame of a morph — 200–400ms stalls per card. It gets a crossfade.
+      { plain: safari },
     );
 
     /* ---------------------------------------------------------------- art */
@@ -1457,6 +1469,27 @@ export default function Carousel({ onOpen }) {
     });
     styleMeta();
 
+    // Compile the plane program and push the atlas to the GPU now, in idle
+    // time while the section is still below the fold. Left to the first
+    // frame, both land in one 250–350ms stall exactly as the visitor is
+    // scrolling the thesis above — that was the "second section is slow".
+    const warm = () => {
+      if (disposed) return;
+      try {
+        renderer.compile(scene, camera);
+        renderer.initTexture(atlas.texture);
+      } catch {
+        // Nothing to recover: the first frame simply pays for it instead.
+      }
+    };
+    const warmHandle = window.requestIdleCallback
+      ? window.requestIdleCallback(warm, { timeout: 1500 })
+      : setTimeout(warm, 300);
+    const cancelWarm = () =>
+      window.cancelIdleCallback
+        ? window.cancelIdleCallback(warmHandle)
+        : clearTimeout(warmHandle);
+
     let tl = null;
     const replay = () => {
       tl?.kill();
@@ -1582,8 +1615,31 @@ export default function Carousel({ onOpen }) {
     const start = performance.now();
     let prevT = start;
 
+    // Adaptive resolution. A frame over 30ms is a missed vsync on any
+    // display; a dozen of them inside a sixty-frame window is a machine that
+    // cannot keep up at this ratio, so drop a quarter step and start
+    // counting again. Floors at 1x.
+    let slowFrames = 0;
+    let windowFrames = 0;
+    const noteFrame = (ms) => {
+      if (dprCap <= 1) return;
+      windowFrames++;
+      if (ms > 30) slowFrames++;
+      if (slowFrames >= 12) {
+        dprCap = Math.max(1, dprCap - 0.25);
+        renderer.setPixelRatio(dprCap);
+        renderer.setSize(viewW, viewH);
+        slowFrames = 0;
+        windowFrames = 0;
+      } else if (windowFrames >= 60) {
+        slowFrames = 0;
+        windowFrames = 0;
+      }
+    };
+
     const frame = () => {
       const now = performance.now();
+      noteFrame(now - prevT);
       // Clamped, so a backgrounded tab does not resume with one huge step.
       const dt = Math.min(0.05, (now - prevT) / 1000);
       prevT = now;
@@ -1699,9 +1755,12 @@ export default function Carousel({ onOpen }) {
       prevT = performance.now();
       renderer.setAnimationLoop(on ? frame : null);
     };
+    // A small margin only: the program is warmed at mount, so the loop no
+    // longer needs a head start, and every frame it runs while the thesis
+    // above is still on screen is a frame that section pays for.
     const loopIO = new IntersectionObserver(
       (entries) => setLoop(entries.some((e) => e.isIntersecting)),
-      { rootMargin: "20%" },
+      { rootMargin: "4%" },
     );
     loopIO.observe(container);
 
@@ -1712,6 +1771,7 @@ export default function Carousel({ onOpen }) {
       clearTimeout(holdTimer);
       clearTimeout(wheelQuiet);
       clearTimeout(fontFallback);
+      cancelWarm();
       renderer.setAnimationLoop(null);
 
       entryIO.disconnect();

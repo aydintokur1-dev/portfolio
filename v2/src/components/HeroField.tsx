@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { isSafari } from "@/lib/ua";
 
 /**
  * The hero dust. The marble artwork is never shown — instead it is sampled
@@ -48,6 +49,9 @@ export function HeroField() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Safari's putImageData is markedly slower; a 1x buffer halves the bytes
+    // it has to move per frame, and the dots are 2px squares anyway.
+    const maxScale = isSafari() ? 1 : 1.5;
 
     // ── dust state ──────────────────────────────────────────────────
     let W = 0, H = 0; // css px
@@ -67,6 +71,7 @@ export function HeroField() {
     let raf = 0;
     let t0 = 0;
     let built = false;
+    let blank = false; // last frame drew nothing, so the next can be skipped
     let inView = true;
     let cursorX = -1e4, cursorY = -1e4;
     let cursorAt = -1e6;
@@ -79,7 +84,7 @@ export function HeroField() {
       W = Math.round(r.width);
       H = Math.round(r.height);
       if (!W || !H || !art.complete || !art.naturalWidth) return;
-      S = Math.min(window.devicePixelRatio || 1, 1.5);
+      S = Math.min(window.devicePixelRatio || 1, maxScale);
       W2 = Math.round(W * S);
       H2 = Math.round(H * S);
       D2 = Math.max(2, Math.round(DOT * S));
@@ -196,6 +201,17 @@ export function HeroField() {
       if (!built || !inView) return;
       const now = performance.now();
       const d = smooth(clamp01(window.scrollY / (H * 0.72)));
+      // Fully scattered, every dot is at zero alpha: nothing to draw, so do
+      // not pay for a full-canvas write while the hero is still edging out.
+      if (d >= 1) {
+        if (!blank) {
+          blank = true;
+          px.fill(0);
+          ctx.putImageData(frame, 0, 0);
+        }
+        return;
+      }
+      blank = false;
       render(now, d, now - cursorAt < CURSOR_IDLE_MS);
     };
 
