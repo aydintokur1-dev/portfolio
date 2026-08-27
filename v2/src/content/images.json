@@ -1,0 +1,745 @@
+{
+ "balkan-transfer": {
+  "cover": "/work/balkan-transfer/cover.webp",
+  "figures": {
+   "cover-big": {
+    "src": "/work/balkan-transfer/cover-big.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "686923542e8ac0b7ca3afa7f_Cover_big.png",
+    "top": null
+   },
+   "analysis-desktop": {
+    "src": "/work/balkan-transfer/analysis-desktop.webp",
+    "width": 1600,
+    "height": 1411,
+    "original": "686928bff9a56751f1788d9e_Analysis_desktop.png",
+    "top": null
+   },
+   "analysis-mobile": {
+    "src": "/work/balkan-transfer/analysis-mobile.webp",
+    "width": 1600,
+    "height": 2344,
+    "original": "686928bfc12af28aa3a77b67_Analysis_mobile.png",
+    "top": null
+   },
+   "user": {
+    "src": "/work/balkan-transfer/user.webp",
+    "width": 1600,
+    "height": 4131,
+    "original": "68692273cb03cdb0d6c2653c_User.png",
+    "top": null
+   },
+   "ia": {
+    "src": "/work/balkan-transfer/ia.webp",
+    "width": 1600,
+    "height": 313,
+    "original": "68692273ba98f993b7f460ca_IA.png",
+    "top": null
+   },
+   "wireframes": {
+    "src": "/work/balkan-transfer/wireframes.webp",
+    "width": 1600,
+    "height": 3795,
+    "original": "6869227322421bae13d2fdf3_Wireframes.png",
+    "top": null
+   },
+   "style-guide": {
+    "src": "/work/balkan-transfer/style-guide.webp",
+    "width": 1600,
+    "height": 2985,
+    "original": "686922730d44c04c71c33da7_Style_guide.png",
+    "top": null
+   },
+   "ui": {
+    "src": "/work/balkan-transfer/ui.webp",
+    "width": 1280,
+    "height": 3308,
+    "original": "68692273353e5c785cd3790e_UI.png",
+    "top": null
+   },
+   "cover-small": {
+    "src": "/work/balkan-transfer/cover-small.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "68692354ff79d8e26e8f158e_Cover_small.png",
+    "top": null
+   }
+  }
+ },
+ "cuckoo": {
+  "cover": "/work/cuckoo/cover.webp",
+  "figures": {
+   "cuckoo-banner": {
+    "src": "/work/cuckoo/cuckoo-banner.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "6536a48e95e16c508408bfdf_Cuckoo-banner.png",
+    "top": null
+   },
+   "fig-2": {
+    "src": "/work/cuckoo/fig-2.webp",
+    "width": 1600,
+    "height": 744,
+    "original": "64fc55b85858957e3a310e4c_2.png",
+    "top": null
+   },
+   "fig-3": {
+    "src": "/work/cuckoo/fig-3.webp",
+    "width": 1600,
+    "height": 1944,
+    "original": "64fc56815858957e3a319f7d_3_(1).png",
+    "top": null
+   },
+   "fig-4": {
+    "src": "/work/cuckoo/fig-4.webp",
+    "width": 1600,
+    "height": 2632,
+    "original": "64fc572f79f83432f66ee601_4_(1).png",
+    "top": null
+   },
+   "fig-5": {
+    "src": "/work/cuckoo/fig-5.webp",
+    "width": 1600,
+    "height": 921,
+    "original": "64fc5809ad4bc0f51d6cda28_5_(1).png",
+    "top": null
+   },
+   "fig-6": {
+    "src": "/work/cuckoo/fig-6.webp",
+    "width": 1600,
+    "height": 472,
+    "original": "64fc590ca1fe9a092b2faaa8_6_(1).png",
+    "top": null
+   },
+   "fig-7": {
+    "src": "/work/cuckoo/fig-7.webp",
+    "width": 1600,
+    "height": 1137,
+    "original": "64fc59ec0a3ae149539e7e2a_7.png",
+    "top": null
+   },
+   "fig-8": {
+    "src": "/work/cuckoo/fig-8.webp",
+    "width": 1600,
+    "height": 582,
+    "original": "64fc5ad2e2c33de3991df25f_8.png",
+    "top": null
+   },
+   "fig-9": {
+    "src": "/work/cuckoo/fig-9.webp",
+    "width": 1600,
+    "height": 504,
+    "original": "64fc5bf1e2c33de3991ee57e_9.png",
+    "top": null
+   },
+   "cuckoo-cover": {
+    "src": "/work/cuckoo/cuckoo-cover.webp",
+    "width": 1392,
+    "height": 704,
+    "original": "6536a3b4563fdaed9ba93ff0_cuckoo_cover.png",
+    "top": null
+   }
+  }
+ },
+ "innos": {
+  "cover": "/work/innos/cover.webp",
+  "figures": {
+   "cover-big": {
+    "src": "/work/innos/cover-big.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "686a5a70548c057ed76ca3b0_Cover_big.png",
+    "top": null
+   },
+   "competitor": {
+    "src": "/work/innos/competitor.webp",
+    "width": 1600,
+    "height": 2951,
+    "original": "686a605448ba3931ec10ab1a_Competitor.png",
+    "top": null
+   },
+   "wireframe": {
+    "src": "/work/innos/wireframe.webp",
+    "width": 1600,
+    "height": 1739,
+    "original": "686a59e3ebcc49cbcf3ae695_Wireframe.png",
+    "top": null
+   },
+   "ui": {
+    "src": "/work/innos/ui.webp",
+    "width": 1600,
+    "height": 1740,
+    "original": "686b7cfc4ea23489e403b848_UI.png",
+    "top": null
+   },
+   "cover-small": {
+    "src": "/work/innos/cover-small.webp",
+    "width": 1392,
+    "height": 704,
+    "original": "686a5a7061d4238ede93cc0f_Cover_small.png",
+    "top": null
+   }
+  }
+ },
+ "about": {
+  "portrait": {
+   "src": "/about/portrait.webp",
+   "width": 728,
+   "height": 686
+  }
+ },
+ "volgen": {
+  "cover": "/work/volgen/cover.webp",
+  "figures": {
+   "hero": {
+    "src": "/work/volgen/hero.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-hero-desktop.png",
+    "top": null
+   },
+   "pills-settle": {
+    "src": "/work/volgen/pills-settle.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-popcorn-pills-settle-desktop.png",
+    "top": null
+   },
+   "pills-drag": {
+    "src": "/work/volgen/pills-drag.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-popcorn-pills-drag-desktop.png",
+    "top": null
+   },
+   "pills-1": {
+    "src": "/work/volgen/pills-1.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-popcorn-pills-1-desktop.png",
+    "top": null
+   },
+   "pills-3": {
+    "src": "/work/volgen/pills-3.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-popcorn-pills-3-desktop.png",
+    "top": null
+   },
+   "works-grid": {
+    "src": "/work/volgen/works-grid.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-works-grid-desktop.png",
+    "top": null
+   },
+   "services": {
+    "src": "/work/volgen/services.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-services-desktop.png",
+    "top": null
+   },
+   "about-home": {
+    "src": "/work/volgen/about-home.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-about-desktop.png",
+    "top": null
+   },
+   "script-to-screen": {
+    "src": "/work/volgen/script-to-screen.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-script-to-screen-desktop.png",
+    "top": null
+   },
+   "nav-scrolled": {
+    "src": "/work/volgen/nav-scrolled.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-home-scroll-01-nav-desktop.png",
+    "top": null
+   },
+   "about-story": {
+    "src": "/work/volgen/about-story.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-about-our-story-desktop.png",
+    "top": null
+   },
+   "about-team": {
+    "src": "/work/volgen/about-team.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "volgen-about-team-desktop.png",
+    "top": null
+   },
+   "hero-mobile": {
+    "src": "/work/volgen/hero-mobile.webp",
+    "width": 780,
+    "height": 1688,
+    "original": "volgen-home-hero-mobile.png",
+    "top": null
+   },
+   "services-mobile": {
+    "src": "/work/volgen/services-mobile.webp",
+    "width": 780,
+    "height": 1688,
+    "original": "volgen-home-services-mobile.png",
+    "top": null
+   }
+  }
+ },
+ "morpa-kampus": {
+  "cover": "/work/morpa/kampus-banner.webp",
+  "figures": {
+   "kampus-banner": {
+    "src": "/work/morpa/kampus-banner.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "6536acc434c4d5ce460525e7_Kampus-banner.png",
+    "top": null
+   },
+   "kampus-2": {
+    "src": "/work/morpa/kampus-2.webp",
+    "width": 1600,
+    "height": 2172,
+    "original": "6438717c317e67bbac7f82fa_Kampus-2_(1).png",
+    "top": null
+   },
+   "kampus-3": {
+    "src": "/work/morpa/kampus-3.webp",
+    "width": 1280,
+    "height": 5178,
+    "original": "6438718ae5f2eec8329d05f5_Kampus-3_(1).png",
+    "top": "/work/morpa/kampus-3-top.webp"
+   }
+  }
+ },
+ "morpa-ders": {
+  "cover": "/work/morpa/morpa-ders-banner.webp",
+  "figures": {
+   "morpa-ders-banner": {
+    "src": "/work/morpa/morpa-ders-banner.webp",
+    "width": 1600,
+    "height": 809,
+    "original": "6536acc4a204f0002d8644e6_Morpa-ders-banner.png",
+    "top": null
+   },
+   "morpa-ders-2": {
+    "src": "/work/morpa/morpa-ders-2.webp",
+    "width": 1600,
+    "height": 768,
+    "original": "64386b1c5f3d62039bd251df_Morpa_Ders_(2)_1_(1).png",
+    "top": null
+   },
+   "morpa-ders-6": {
+    "src": "/work/morpa/morpa-ders-6.webp",
+    "width": 1600,
+    "height": 1978,
+    "original": "64386b847e8da64f9d243d9e_Morpa_Ders_(6)_1_(1).png",
+    "top": null
+   },
+   "morpa-ders-5": {
+    "src": "/work/morpa/morpa-ders-5.webp",
+    "width": 1600,
+    "height": 1556,
+    "original": "64386b6fdb5adb1f7d43104e_Morpa_Ders_(5)_1_(1).png",
+    "top": null
+   },
+   "morpa-ders-7": {
+    "src": "/work/morpa/morpa-ders-7.webp",
+    "width": 1600,
+    "height": 558,
+    "original": "64386ba8def807cf17af0bc5_Morpa_Ders_(7)_1_(1).png",
+    "top": null
+   },
+   "morpa-ders-9": {
+    "src": "/work/morpa/morpa-ders-9.webp",
+    "width": 1600,
+    "height": 450,
+    "original": "64386bc4dcaeaa06fb5e72b5_Morpa_Ders_(9)_1_(1).png",
+    "top": null
+   },
+   "morpa-ders-8": {
+    "src": "/work/morpa/morpa-ders-8.webp",
+    "width": 1600,
+    "height": 347,
+    "original": "64386bb520aa4782001d6e69_Morpa_Ders_(8)_1_(1).png",
+    "top": null
+   },
+   "group-764": {
+    "src": "/work/morpa/group-764.webp",
+    "width": 1600,
+    "height": 2801,
+    "original": "64386c1ba64c0d8632f3275b_Group_764.png",
+    "top": null
+   },
+   "group-763": {
+    "src": "/work/morpa/group-763.webp",
+    "width": 1600,
+    "height": 3133,
+    "original": "64386ca39262e5563b92e4be_Group_763.png",
+    "top": null
+   },
+   "group-770": {
+    "src": "/work/morpa/group-770.webp",
+    "width": 1280,
+    "height": 2907,
+    "original": "64386d5c7c7bc7546117eb66_Group_770_(1).png",
+    "top": null
+   },
+   "group-771": {
+    "src": "/work/morpa/group-771.webp",
+    "width": 1600,
+    "height": 1283,
+    "original": "64386d406ff53a0b111a80f9_Group_771_(1).png",
+    "top": null
+   }
+  }
+ },
+ "akbank-wings": {
+  "cover": "/work/akbank/banner.png",
+  "figures": {
+   "banner": {
+    "src": "/work/akbank/banner.png",
+    "width": 1962,
+    "height": 992
+   },
+   "ui-2": {
+    "src": "/work/akbank/ui-2.png",
+    "width": 1812,
+    "height": 5894
+   },
+   "ui-3": {
+    "src": "/work/akbank/ui-3.png",
+    "width": 1811,
+    "height": 3274
+   },
+   "ui-4": {
+    "src": "/work/akbank/ui-4.png",
+    "width": 1811,
+    "height": 6244
+   }
+  }
+ },
+ "tmob-studio": {
+  "cover": "/work/tmob-studio/cover.webp",
+  "figures": {
+   "cover": {
+    "src": "/work/tmob-studio/cover.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "cover.png",
+    "top": null
+   },
+   "hammer-house": {
+    "src": "/work/tmob-studio/hammer-house.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "hammer-house.png",
+    "top": null
+   },
+   "loop": {
+    "src": "/work/tmob-studio/loop.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "loop.png",
+    "top": null
+   },
+   "stack": {
+    "src": "/work/tmob-studio/stack.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "stack.png",
+    "top": null
+   },
+   "enterprise": {
+    "src": "/work/tmob-studio/enterprise.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "enterprise.png",
+    "top": null
+   },
+   "cta": {
+    "src": "/work/tmob-studio/cta.webp",
+    "width": 1600,
+    "height": 1000,
+    "original": "cta.png",
+    "top": null
+   },
+   "mobile-hero": {
+    "src": "/work/tmob-studio/mobile-hero.webp",
+    "width": 780,
+    "height": 1688,
+    "original": "mobile-hero.png",
+    "top": null
+   }
+  }
+ },
+ "pickleball-homepage": {
+  "figures": {
+   "clubs": {
+    "src": "/work/pickleball-homepage/clubs.webp",
+    "width": 1600,
+    "height": 2920,
+    "original": "Clubs-1.webp",
+    "top": null
+   },
+   "ladder-leagues": {
+    "src": "/work/pickleball-homepage/ladder-leagues.webp",
+    "width": 1600,
+    "height": 6467,
+    "original": "Ladder-Leagues-1.webp + Ladder-Leagues-2.webp + Ladder-Leagues-3.webp",
+    "top": null
+   },
+   "team-leagues": {
+    "src": "/work/pickleball-homepage/team-leagues.webp",
+    "width": 1600,
+    "height": 8250,
+    "original": "Team-Leagues-1.webp + Team-Leagues-2.webp + Team-Leagues-3.webp",
+    "top": null
+   },
+   "tournaments": {
+    "src": "/work/pickleball-homepage/tournaments.webp",
+    "width": 1600,
+    "height": 8474,
+    "original": "Tournaments-1.webp + Tournaments-2.webp + Tournaments-3.webp",
+    "top": null
+   }
+  },
+  "cover": "/work/pickleball-homepage/cover.webp"
+ },
+ "pickleball-apps": {
+  "cover": "/work/pickleball-apps/cover-16x10.webp",
+  "figures": {
+   "leagues-home-ios": {
+    "src": "/work/pickleball-apps/leagues-home-ios.webp",
+    "width": 1580,
+    "height": 9216,
+    "original": "Homepage IOS.webp",
+    "top": null
+   },
+   "leagues-home-m3": {
+    "src": "/work/pickleball-apps/leagues-home-m3.webp",
+    "width": 1580,
+    "height": 9336,
+    "original": "Homepage M3.webp",
+    "top": null
+   },
+   "pb-home-ios": {
+    "src": "/work/pickleball-apps/pb-home-ios.webp",
+    "width": 1580,
+    "height": 14080,
+    "original": "pickleball.com home - IOS.webp",
+    "top": null
+   },
+   "pb-home-m3": {
+    "src": "/work/pickleball-apps/pb-home-m3.webp",
+    "width": 1580,
+    "height": 13924,
+    "original": "pickleball.com home - M3.webp",
+    "top": null
+   },
+   "dashboard-ios": {
+    "src": "/work/pickleball-apps/dashboard-ios.webp",
+    "width": 1580,
+    "height": 16383,
+    "original": "Dashboard - IOS.webp",
+    "top": null
+   },
+   "dashboard-m3": {
+    "src": "/work/pickleball-apps/dashboard-m3.webp",
+    "width": 1580,
+    "height": 16383,
+    "original": "Dashboard - M3.webp",
+    "top": null
+   },
+   "profile-ios": {
+    "src": "/work/pickleball-apps/profile-ios.webp",
+    "width": 1580,
+    "height": 16383,
+    "original": "Player profile - IOS.webp",
+    "top": null
+   },
+   "profile-m3": {
+    "src": "/work/pickleball-apps/profile-m3.webp",
+    "width": 1580,
+    "height": 16383,
+    "original": "Player profile - M3.webp",
+    "top": null
+   },
+   "search-ios": {
+    "src": "/work/pickleball-apps/search-ios.webp",
+    "width": 1580,
+    "height": 3896,
+    "original": "Search - IOS.webp",
+    "top": null
+   },
+   "search-m3": {
+    "src": "/work/pickleball-apps/search-m3.webp",
+    "width": 1580,
+    "height": 4368,
+    "original": "Search - M3.webp",
+    "top": null
+   },
+   "h2h-ios": {
+    "src": "/work/pickleball-apps/h2h-ios.webp",
+    "width": 1580,
+    "height": 8296,
+    "original": "H2H - IOS.webp",
+    "top": null
+   },
+   "h2h-m3": {
+    "src": "/work/pickleball-apps/h2h-m3.webp",
+    "width": 1580,
+    "height": 7628,
+    "original": "H2H - M3.webp",
+    "top": null
+   },
+   "invites-ios": {
+    "src": "/work/pickleball-apps/invites-ios.webp",
+    "width": 1580,
+    "height": 3616,
+    "original": "Invites - IOS.webp",
+    "top": null
+   },
+   "invites-m3": {
+    "src": "/work/pickleball-apps/invites-m3.webp",
+    "width": 1580,
+    "height": 3952,
+    "original": "Invites - M3.webp",
+    "top": null
+   },
+   "notifications-ios": {
+    "src": "/work/pickleball-apps/notifications-ios.webp",
+    "width": 1580,
+    "height": 11876,
+    "original": "Tournament Notifications - IOS.webp",
+    "top": null
+   },
+   "notifications-m3": {
+    "src": "/work/pickleball-apps/notifications-m3.webp",
+    "width": 1580,
+    "height": 11664,
+    "original": "Tournament Notifications - M3.webp",
+    "top": null
+   },
+   "league-ios": {
+    "src": "/work/pickleball-apps/league-ios.webp",
+    "width": 1580,
+    "height": 8588,
+    "original": "League Details - IOS.webp",
+    "top": null
+   },
+   "league-m3": {
+    "src": "/work/pickleball-apps/league-m3.webp",
+    "width": 1580,
+    "height": 9140,
+    "original": "League Details - M3.webp",
+    "top": null
+   },
+   "league-stats-ios": {
+    "src": "/work/pickleball-apps/league-stats-ios.webp",
+    "width": 1580,
+    "height": 10328,
+    "original": "Player league stats - IOS.webp",
+    "top": null
+   },
+   "league-stats-m3": {
+    "src": "/work/pickleball-apps/league-stats-m3.webp",
+    "width": 1580,
+    "height": 10092,
+    "original": "Player league stats - M3.webp",
+    "top": null
+   }
+  }
+ },
+ "pickleball-tournaments": {
+  "cover": "/work/pickleball-tournaments/cover.webp",
+  "figures": {
+   "details-old": {
+    "src": "/work/pickleball-tournaments/details-old.webp",
+    "width": 2880,
+    "height": 4946,
+    "original": "Details - old.webp",
+    "top": null
+   },
+   "details": {
+    "src": "/work/pickleball-tournaments/details.webp",
+    "width": 2880,
+    "height": 4952,
+    "original": "Details.webp",
+    "top": null
+   },
+   "events-old": {
+    "src": "/work/pickleball-tournaments/events-old.webp",
+    "width": 2880,
+    "height": 4946,
+    "original": "Events - old.webp",
+    "top": null
+   },
+   "events": {
+    "src": "/work/pickleball-tournaments/events.webp",
+    "width": 2880,
+    "height": 4952,
+    "original": "Events.webp",
+    "top": null
+   },
+   "players-old": {
+    "src": "/work/pickleball-tournaments/players-old.webp",
+    "width": 2880,
+    "height": 4946,
+    "original": "Players - old.webp",
+    "top": null
+   },
+   "players": {
+    "src": "/work/pickleball-tournaments/players.webp",
+    "width": 2880,
+    "height": 4946,
+    "original": "Players.webp",
+    "top": null
+   },
+   "teams-old": {
+    "src": "/work/pickleball-tournaments/teams-old.webp",
+    "width": 2880,
+    "height": 4946,
+    "original": "Teams - old.webp",
+    "top": null
+   },
+   "teams": {
+    "src": "/work/pickleball-tournaments/teams.webp",
+    "width": 2880,
+    "height": 4946,
+    "original": "Teams.webp",
+    "top": null
+   },
+   "results": {
+    "src": "/work/pickleball-tournaments/results.webp",
+    "width": 2880,
+    "height": 5398,
+    "original": "Results.webp",
+    "top": null
+   },
+   "results-old": {
+    "src": "/work/pickleball-tournaments/results-old.webp",
+    "width": 2880,
+    "height": 4946,
+    "original": "Tournament - Results - Desktop.webp",
+    "top": null
+   },
+   "cover-old": {
+    "src": "/work/pickleball-tournaments/cover-old.webp",
+    "width": 1600,
+    "height": 2000
+   },
+   "cover-new": {
+    "src": "/work/pickleball-tournaments/cover-new.webp",
+    "width": 1600,
+    "height": 2000
+   }
+  }
+ }
+}

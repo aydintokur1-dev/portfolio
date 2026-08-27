@@ -1,0 +1,19 @@
+# Research: mensch.club + sarahzaheer.site
+
+## mensch.club (brand studio, hand-coded, Lenis + custom vanilla JS + WebGL, native View Transitions)
+- Type: Greed Narrow (400/600) display; Be Vietnam Pro body; UnifrakturCook blackletter for single accent words inside headlines (.uf span). Mono ambient for terminal bits. Scale 9-30px tokens + clamp display (~34px sections); tracking +.08em small caps, -.02em display; line-height 1.0 display / 1.55 body. Giant footer wordmark SVG at 102% vw bleeding off edges.
+- Color: WARM dark — #2A0800 page, #1B0800 recessed, #050402 floor; cream ink #EBE9D9 (white rationed to display); muted = alpha of cream (.86/.60/.38); ONE orange accent #FB3F0C (hover #FD6A3D, deep #D42D00, tint 12%) — "a moment, never a surface". Hairlines white alpha .12/.25; glass rgba(255,255,255,.06) + blur(24px) saturate(180%). Animated SVG feTurbulence grain (220px tile, .12 opacity, overlay, jittered 150ms). Warm-tinted shadows.
+- Layout: 8pt spacing tokens (4→224px); radii 8/12/16/24/pill; NO header — fixed glass nav pill top-left + INFO pill top-right, expand in place. Fixed full-viewport hero, content scrolls OVER it (margin-top:100svh); sticky shared WebGL bg across sections. Work page: fixed left rail (title + rotating testimonial) + 2-col masonry right.
+- Motion doctrine: ONE ease cubic-bezier(.16,1,.3,1); durations .2/.4/.7; stagger .1s; "nothing bounces"; marquees linear only. Native MPA View Transitions (fade + scale .992/1.012 + tiny translateY, .4s). Scroll-fill manifesto: per-word spans grey→white on scroll, hot words flip orange + blackletter. CRT boot loader once-ever (localStorage), click-skip, reduced-motion skip, doubles as preloader. Custom cursor trail of 15 mark images. Masked marquees (mask-image fade 7%/93%, pause on hover). Draggable glass service cards.
+- Testimonials: hairline-border cards in infinite marquee, 14px quote + 46px avatar + name in display face; also left-rail rotating single testimonial with dots.
+- Mood: warm-dark editorial-meets-terminal; ruthless token discipline under weirdness.
+
+## sarahzaheer.site (UX designer portfolio, Framer, Aug 2026)
+- Type: Archivo Thin/ExtraLight mega-display (hero 97px, statements 230px thin, project titles 135-148px, -0.02..-0.07em) vs dense 11-14px label layer; FFF Acid Grotesk secondary display; nothing between 32-50px — the gap IS the style. Signature tics: [square brackets] in headlines, /01 /02 numbered indices, "®" after name, live PST clock in nav+footer, letter-spaced giant footer name.
+- Color: light — #fcfcfc ground, #1e1e1e ink/dark sections (never pure white/black); pastels as isolated object fills (lavender #bebdd2 circular CTA, coral #de5849, pale lime #e9f2a2, powder #9ecedd, sage #94ccaf); dot-matrix illustrations from 1,335 tiny circle divs (orange/green/grey) that spring in per-dot. mix-blend-mode:difference text.
+- Layout: fixed dark nav bar (name ® left, links center, live clock + Let's Talk right); work = sticky-stacked full-width project panels (top:0/35px/150px) with giant thin titles + role/org/duration meta, not a grid; process = 6 numbered sticky rows; skills = 15 numbered marquee rows; contact form page.
+- Motion: Framer springs — preloader hands into ~4.5s choreographed entrance cascade; two recipes only: text tween .4s ease [0.12,0.23,0,1] stagger .05-.1; objects spring .4s bounce .2. Tickers (Let's Talk label loop, skills rows). Circular CTA with offset dashed ring + disc scaling from 0 on hover.
+- Mood: quiet Swiss light-mode + extreme scale contrast + annotation-system aesthetic (reads like a well-labeled design file).
+
+## Cross-site "hot right now" patterns
+Masked infinite tickers; once-per-visit loaders choreographing entrance; live/system-status chrome (boot terminal, ticking clock); fixed pill navs instead of header bars; near-black/near-white grounds never #000/#fff; single-statement manifesto sections at display scale; scroll-fill word-by-word text.

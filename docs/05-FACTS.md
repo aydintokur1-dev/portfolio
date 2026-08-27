@@ -53,7 +53,29 @@ Your own framing, worth keeping: *"crafting small interaction moments like the d
 
 ---
 
-## Recommendations (8)
+## Recommendations (10)
+
+### Baysal Sümer — Senior Product Designer | Design Systems · Complex Platforms · AI Workflows | 50K+ Users | WCAG 2.1 AA | IBM Design Thinking Certified · 25 Aug 2026 · same team (Pickleball.com)
+> "I've worked with a lot of designers, and I count myself lucky to work with Aydin. He's at the top of that list.
+>
+> He's easy to work with and he actually communicates. Ask him something and you get a real answer, and you always know where a project stands with him.
+>
+> His eye is the part I still can't explain. He catches details the rest of us walk straight past, usually the exact ones that would have blown up three weeks later. I've stopped being surprised by it and just started asking him to look at things before they ship.
+>
+> I'd recommend Aydin to anyone without thinking twice. Whoever works with him next is lucky."
+
+**★ Best line on the site for the "survives production" thesis:** *"the exact ones that would have blown up three weeks later"* — from the designer you co-built the native app libraries with.
+
+### Kiril Spasov — UX/UI | Web | Product Design · 25 Aug 2026 · same team (Pickleball.com)
+> "I really enjoyed working with Aydın at Pickleball.com.
+>
+> He's incredibly detail-oriented and has a strong eye for creating and maintaining visually consistent designs. His ability to build systems that are both scalable and practical, while applying them consistently across all of our products, really stood out to me.
+>
+> His overall approach to design and problem-solving clearly reflects his experience and professionalism.
+>
+> I'd definitely recommend Aydın to any product team."
+
+**★ Direct evidence for the "systems" claim** — a peer designer, naming scalable + consistent across all products.
 
 ### Nancy Kaplan — Senior UX Designer | Researcher · 15 May 2025 · **managed Aydın directly**
 > "I've had the pleasure of working closely with Aydin on several high-impact projects, and he is one of the most talented designers I've collaborated with. He brings a rare blend of strategic thinking, user-centered design, and pixel-perfect execution to every initiative. What sets him apart is not just his design expertise, but also his ability to deeply understand user needs and translate them into intuitive, elegant solutions. Whether it's designing complex flows, refining a design system, or elevating an existing design, Aydin consistently enhances the quality and cohesion of the product experience."

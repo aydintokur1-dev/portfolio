@@ -147,7 +147,7 @@ Full text of all eight in `05-FACTS.md`.
 > ## Say hi
 > Open to senior product design and design engineering roles. Also just happy to talk about design systems, front-end craft, or what AI is actually good for in a designer's week.
 >
-> `aydintokur1@gmail.com` · LinkedIn · Behance · CV
+> `aydintokur1@gmail.com` · LinkedIn · CV
 
 ---
 
