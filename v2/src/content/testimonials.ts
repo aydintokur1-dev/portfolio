@@ -41,6 +41,8 @@ export const testimonials: Testimonial[] = [
     date: "March 2025",
     lang: "en",
     text: "I have had the pleasure of working with Aydin at Pickleball.com as his Project Manager for various projects related to our product suite. Aydin is very detail oriented, asks great questions and gives very good feedback when given a task. He consistently delivers quality designs on time and is quick to make adjustments as needs of our customers change.\n\nAydin has been a major contributor to the updated pickleballtournaments.com home page, search, and detail pages. He has also done exceptional work on our Admin area.",
+    excerpt:
+      "Aydin is very detail oriented, asks great questions and gives very good feedback when given a task. He consistently delivers quality designs on time and is quick to make adjustments as needs of our customers change.",
   },
   {
     name: "Aleksandra Boskovic",
@@ -66,6 +68,7 @@ export const testimonials: Testimonial[] = [
     date: "February 2024",
     lang: "en",
     text: "I've worked with Aydin for just more than a year. He was in my team all the time and we collaborated on several projects. I was doing revisions of his work and also provided consultations and guidance whenever he or I found it beneficial or necessary. (I should also add that the focus of our meetings was mostly on UX design.)\n\nFrom the beginning, I noticed that he is one of those individuals with whom you can feel the drive to expand their knowledge constantly.",
+    excerpt: "From the beginning, I noticed that he is one of those individuals with whom you can feel the drive to expand their knowledge constantly.",
   },
   {
     name: "Tuna Aldemir",
@@ -76,6 +79,7 @@ export const testimonials: Testimonial[] = [
     lang: "tr",
     text: "Aydın'la 6-8 ay kadar beraber çalışıp birden fazla proje tamamladık. UI yönü çok kuvvetli, deneyimli, yaratıcı ve en önemlisi uyumlu ve beraber çalışması zevkli.",
     en: "Aydın and I worked together for 6–8 months and completed several projects. Very strong on UI, experienced, creative — and most importantly, easy to work with and a pleasure to collaborate with.",
+    excerptEn: "Very strong on UI, experienced, creative — and most importantly, easy to work with and a pleasure to collaborate with.",
   },
   {
     name: "Gökhan Kara",

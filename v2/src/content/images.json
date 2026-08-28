@@ -142,46 +142,6 @@
    }
   }
  },
- "innos": {
-  "cover": "/work/innos/cover.webp",
-  "figures": {
-   "cover-big": {
-    "src": "/work/innos/cover-big.webp",
-    "width": 1600,
-    "height": 809,
-    "original": "686a5a70548c057ed76ca3b0_Cover_big.png",
-    "top": null
-   },
-   "competitor": {
-    "src": "/work/innos/competitor.webp",
-    "width": 1600,
-    "height": 2951,
-    "original": "686a605448ba3931ec10ab1a_Competitor.png",
-    "top": null
-   },
-   "wireframe": {
-    "src": "/work/innos/wireframe.webp",
-    "width": 1600,
-    "height": 1739,
-    "original": "686a59e3ebcc49cbcf3ae695_Wireframe.png",
-    "top": null
-   },
-   "ui": {
-    "src": "/work/innos/ui.webp",
-    "width": 1600,
-    "height": 1740,
-    "original": "686b7cfc4ea23489e403b848_UI.png",
-    "top": null
-   },
-   "cover-small": {
-    "src": "/work/innos/cover-small.webp",
-    "width": 1392,
-    "height": 704,
-    "original": "686a5a7061d4238ede93cc0f_Cover_small.png",
-    "top": null
-   }
-  }
- },
  "about": {
   "portrait": {
    "src": "/about/portrait.webp",
@@ -239,6 +199,13 @@
     "width": 1600,
     "height": 1000,
     "original": "volgen-home-services-desktop.png",
+    "top": null
+   },
+   "about-header": {
+    "src": "/work/volgen/about-header.webp",
+    "width": 1440,
+    "height": 900,
+    "original": "volgen-about-header-chips-desktop.png",
     "top": null
    },
    "about-home": {
@@ -422,60 +389,6 @@
     "src": "/work/akbank/ui-4.png",
     "width": 1811,
     "height": 6244
-   }
-  }
- },
- "tmob-studio": {
-  "cover": "/work/tmob-studio/cover.webp",
-  "figures": {
-   "cover": {
-    "src": "/work/tmob-studio/cover.webp",
-    "width": 1600,
-    "height": 1000,
-    "original": "cover.png",
-    "top": null
-   },
-   "hammer-house": {
-    "src": "/work/tmob-studio/hammer-house.webp",
-    "width": 1600,
-    "height": 1000,
-    "original": "hammer-house.png",
-    "top": null
-   },
-   "loop": {
-    "src": "/work/tmob-studio/loop.webp",
-    "width": 1600,
-    "height": 1000,
-    "original": "loop.png",
-    "top": null
-   },
-   "stack": {
-    "src": "/work/tmob-studio/stack.webp",
-    "width": 1600,
-    "height": 1000,
-    "original": "stack.png",
-    "top": null
-   },
-   "enterprise": {
-    "src": "/work/tmob-studio/enterprise.webp",
-    "width": 1600,
-    "height": 1000,
-    "original": "enterprise.png",
-    "top": null
-   },
-   "cta": {
-    "src": "/work/tmob-studio/cta.webp",
-    "width": 1600,
-    "height": 1000,
-    "original": "cta.png",
-    "top": null
-   },
-   "mobile-hero": {
-    "src": "/work/tmob-studio/mobile-hero.webp",
-    "width": 780,
-    "height": 1688,
-    "original": "mobile-hero.png",
-    "top": null
    }
   }
  },

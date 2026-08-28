@@ -5,10 +5,8 @@ import pickleballHomepage from "./pickleball-homepage";
 import pickleballTournaments from "./pickleball-tournaments";
 import pickleballApps from "./pickleball-apps";
 import volgen from "./volgen";
-import tmobStudio from "./tmob-studio";
 import balkanTransfer from "./balkan-transfer";
 import cuckoo from "./cuckoo";
-import innos from "./innos";
 import akbank from "./akbank";
 import morpaKampus from "./morpa-kampus";
 import morpaDers from "./morpa-ders";
@@ -20,10 +18,8 @@ export const studies: CaseStudy[] = [
   pickleballHomepage,
   pickleballApps,
   volgen,
-  tmobStudio,
   balkanTransfer,
   cuckoo,
-  innos,
   akbank,
   morpaKampus,
   morpaDers,

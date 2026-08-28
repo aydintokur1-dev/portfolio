@@ -320,6 +320,7 @@ html.lenis, html.lenis body { height: auto; }
   background: var(--accent);
   box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.5);
 }
+.stat-tick-center::after { margin-inline: auto; }
 
 /* footer accent segment on the top hairline */
 .footer-tick {

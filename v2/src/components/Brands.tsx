@@ -7,8 +7,8 @@ import { brands } from "@/content/brands";
 export function Brands() {
   const row = [...brands, ...brands];
   return (
-    <section className="hairline-t hairline-b py-8" aria-label="Employers and clients">
-      <div className="marquee" style={{ ["--marquee-dur" as string]: "36s" }}>
+    <section className="hairline-t hairline-b py-6" aria-label="Employers and clients">
+      <div className="marquee py-2" style={{ ["--marquee-dur" as string]: "36s" }}>
         <div className="marquee-track items-center gap-8 pr-8">
           {row.map((b, i) => (
             <span key={i} aria-hidden={i >= brands.length || undefined} className="flex shrink-0 items-center gap-8">

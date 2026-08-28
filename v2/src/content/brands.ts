@@ -16,7 +16,7 @@ export const brands: Brand[] = [
   { name: "Tmob AI Studio", slug: "tmob-ai-studio" },
   { name: "Balkan Transfer", slug: "balkan-transfer", period: "2023" },
   { name: "Cuckoo", slug: "cuckoo", period: "2022 – 2023" },
-  { name: "VOLGEN", slug: "volgen", period: "2026" },
+  { name: "VOLGEN", slug: "volgen", period: "2025" },
   { name: "Innos", slug: "innos", period: "2024" },
   { name: "Investisseur Privé", slug: "investisseur-prive" },
 ];

@@ -68,17 +68,6 @@ export default async function CaseStudyPage(props: PageProps<"/work/[slug]">) {
                 {String(studies.length).padStart(2, "0")}
               </span>
               <span>{study.year}</span>
-              {study.gated && (
-                <span
-                  className="chip"
-                  style={{
-                    color: "rgb(var(--accent-rgb))",
-                    borderColor: "rgba(var(--accent-rgb),.4)",
-                  }}
-                >
-                  [ UNLOCKED ]
-                </span>
-              )}
             </p>
 
             <h1 className="t-display t-display-xl mt-8">

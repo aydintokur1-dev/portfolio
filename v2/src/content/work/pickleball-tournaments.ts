@@ -9,17 +9,18 @@ const study: CaseStudy = {
   slug: "pickleball-tournaments",
   title: "One tournament page, every tab, every state",
   org: "PickleballTournaments.com",
-  year: "2024 – 2025",
+  year: "2026",
   role: "Senior Product Designer",
   tint: "yellow",
   tier: "depth",
   summary:
-    "The tournament page is everything a player needs to know about an event, in one place: when, where, what it costs, how to register, who's playing, who needs a partner, the results, the videos. I redesigned all thirteen of its tabs — five are shown here — and, before any of that, rebuilt the Figma file so the team could find the latest design and every state it has to cover. One button on it cut misdirected support messages by 90%.",
+    "The tournament page is everything a player needs to know about an event, in one place: when, where, what it costs, how to register, who's playing, who needs a partner, the results, the videos. I redesigned all thirteen of its tabs — five are shown here — and, before any of that, rebuilt the Figma file so the team could find the latest design and every state it has to cover. One button on it cut misdirected support messages by 90%. The platform behind it has hosted 22,000+ tournaments and 4M+ matches; this page is where every one of them starts.",
   facts: [
     { label: "Role", value: "Senior Product Designer" },
     { label: "Scope", value: "Tournament page — 13 tabs; Details · Events · Players · Teams · Results shown" },
     { label: "Status", value: "In development — the live site still runs the previous design" },
     { label: "Platform", value: "Web · Figma" },
+    { label: "Scale", value: "22K+ tournaments hosted · 4M+ matches played · 1K+ active at any time" },
   ],
   cover: "cover",
   coverCompare: { before: { src: "details-old", thumb: "cover-old" }, after: { src: "details", thumb: "cover-new" } },
@@ -62,6 +63,7 @@ const study: CaseStudy = {
             { value: "90%", label: "fewer players contacting the platform instead of the event, after the Contact button change" },
             { value: "13", label: "tabs redesigned — five of them shown here" },
             { value: "1", label: "Figma page per site page, every state documented" },
+            { value: "22K+", label: "tournaments hosted on the platform this page serves" },
           ],
         },
         {
@@ -313,7 +315,7 @@ const study: CaseStudy = {
       blocks: [
         {
           type: "p",
-          text: "The redesign is handed off and in development; what's on pickleballtournaments.com today is the previous design shown on the left of each pair. It's built on the card and search components the rest of the suite adopted — a tournament card behaves like a club card behaves like a league card, which is the whole system argument in one interaction. The earlier updates to the home page and search are the part that's already public.",
+          text: "The redesign is handed off and in development; what's on pickleballtournaments.com today is the previous design shown on the left of each pair. It's built on the card and search components the rest of the suite adopted — a tournament card behaves like a club card behaves like a league card, which is the whole system argument in one interaction.",
         },
       ],
     },

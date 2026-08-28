@@ -4,7 +4,7 @@ const study: CaseStudy = {
   slug: "volgen",
   title: "Research to live in three days",
   org: "VOLGEN",
-  year: "2026",
+  year: "2025",
   role: "Designed & built",
   tint: "yellow",
   tier: "flagship",
@@ -24,15 +24,19 @@ const study: CaseStudy = {
       blocks: [
         {
           type: "p",
-          text: "VOLGEN is an AI video production studio. It takes an idea, a word, a feeling, and turns it into cinematic scenes, digital characters and campaigns, bringing in traditional production where that adds something. It needed a site that said this plainly, showed the work, and turned an enquiry into a lead without anyone copying it out of an inbox. In Turkish and English. Quickly.",
+          text: "VOLGEN is an AI video production studio. It takes an idea, a word, a feeling, and turns it into cinematic scenes, digital characters and campaigns, bringing in traditional production where that adds something. It needed a site that said this plainly, showed the work, and turned an enquiry into a lead without anyone copying it out of an inbox. Quickly.",
         },
         {
           type: "stat",
           items: [
             { value: "3", label: "days, research to live" },
-            { value: "2", label: "languages, one structure" },
+            { value: "15", label: "pieces in the works grid" },
             { value: "10", label: "physics pills you can throw around" },
           ],
+        },
+        {
+          type: "p",
+          text: "On top of the client's brief I set myself one: the site had to look modern and be fun to surf, and still put the work first. Every design decision below is evidence for that line.",
         },
         {
           type: "p",
@@ -52,8 +56,26 @@ const study: CaseStudy = {
           text: "What came out was the information architecture: Home, About, Services, Work, Contact. Five items, because a studio site is a portfolio with a phone number attached — and only two of them are routes; Services, Work and Contact live as anchors on one long home page. Which of the five carries the weight, and in what order, was my call, not the model's.",
         },
         {
+          type: "p",
+          text: "The hero leads with the showcase video, because on an AI video studio's site the reel is the product; everything else on the page is there to support it.",
+        },
+        {
+          type: "decision",
+          problem: "A studio site that opens with a pitch makes you scroll to find the proof, and the slogan and the logo compete for the same first glance.",
+          decision: "The showreel first, full-bleed. The slogan — Rule the unexpected — is positioned specifically below where the VOLGEN logo lands in the video.",
+          outcome: "The logo appears through the video in different places, patterns and textures, and the slogan sits under it, so the two always read together. It's the page's best detail, and the first thing you see.",
+        },
+        {
           type: "figure",
-          figure: { src: "hero", caption: "The hero: a WebGL scene, Outfit at 96px, one acid-lime accent on near-black" },
+          figure: { src: "hero", caption: "The hero: the showcase video, with Rule the unexpected set under where the logo lands — one acid-lime accent on near-black" },
+        },
+        {
+          type: "p",
+          text: "Under it, the what-we-do section says one thing: we create with AI, but we decide. It says it with a brain at the centre of orbiting circles. Looking back, a stronger element could have carried that idea. It does the job.",
+        },
+        {
+          type: "figure",
+          figure: { src: "about-home", caption: "What they do: the brain at the centre of the circles — create with AI, decide yourself" },
         },
       ],
     },
@@ -62,21 +84,27 @@ const study: CaseStudy = {
       blocks: [
         {
           type: "p",
-          text: "Next.js, built in Antigravity with Gemini 3 Pro and Claude Opus 4.5. The split was simple. The agents wrote most of the code. I decided what the code should do: the component boundaries, how Turkish and English share one structure, and what happens when someone sends an enquiry.",
+          text: "Next.js, built in Antigravity with Gemini 3 Pro and Claude Opus 4.5. The split was simple. The agents wrote most of the code. I decided what the code should do: the component boundaries, and what happens when someone sends an enquiry.",
         },
         {
           type: "p",
-          text: "That last one matters more than it sounds. A studio site's only job, after looking good, is to turn interest into a conversation. So enquiries feed a CRM pipeline behind the site — set up in the same three days as the pages around it — with the content managed through a login-gated CMS rather than redeploys. [NEEDS: one sentence on how the CRM flow actually runs — what happens after someone writes to hello@volgen.ai]",
+          text: "That last one matters more than it sounds. A studio site's only job, after looking good, is to turn interest into a conversation. So enquiries feed a CRM pipeline behind the site — set up in the same three days as the pages around it — with the content managed through a login-gated CMS rather than redeploys. When someone writes in, the form posts to the site's own backend: the enquiry lands as a lead in the admin and the studio gets a notification email, so nothing sits in an inbox waiting to be copied out.",
+        },
+        {
+          type: "decision",
+          problem: "A studio site goes stale the week the agency can't change it without the person who built it.",
+          decision: "A login-gated admin where the agency edits any text and any project's details, and adds new works — in Turkish and English — without me.",
+          outcome: "Content is theirs, not a redeploy. The leads live in the same place, so the admin is the CRM and the CMS at once.",
         },
         {
           type: "p",
-          text: "Bilingual is a design decision, not a translation task. Turkish runs longer than English and breaks in different places, so every text container has to hold both without the layout changing — the EN/TR toggle is a segmented pill in the nav, and flipping it is the fastest QA tool the site has. Designing and building at the same time is what made that cheap: I could put the two languages side by side and adjust the component, instead of annotating a Figma file for someone else to interpret.",
+          text: "The works grid mixes vertical and horizontal pieces on purpose: each one keeps the orientation of the format it was made for, so the format communicates itself without a label. Fifteen pieces — twelve landscape, three vertical.",
         },
         {
           type: "figures",
           figures: [
-            { src: "services", caption: "Services — Space Grotesk labels, letter-spaced caps" },
-            { src: "works-grid", caption: "The works grid: eight videos, posters lazy-loaded" },
+            { src: "services", caption: "Skills: one card per capability in a carousel, AI Commercial first, the eyebrow letter-spaced in the accent" },
+            { src: "works-grid", caption: "The works grid: fifteen pieces, twelve landscape and three vertical, each in the orientation it was made for" },
           ],
         },
       ],
@@ -86,7 +114,7 @@ const study: CaseStudy = {
       blocks: [
         {
           type: "p",
-          text: "With the structure standing, the last day went on the things a template never has. At the bottom of the home page, ten labelled pills — HYBRID, FILMCRAFT, MOTION CONTROL, STORYTELLING and six more — drop into the contact section under a rigid-body physics simulation. They fall, collide, and stack against an invisible floor; every load settles into a different pile, and you can pick one up and knock the others around. It renders on desktop only — on a phone there is no room to play, so it simply isn't there.",
+          text: "With the structure standing, the last day went on the things a template never has. At the bottom of the home page, ten labelled pills — the studio's key capabilities: HYBRID, FILMCRAFT, MOTION CONTROL, STORYTELLING and six more — drop into the contact section under a rigid-body physics simulation. They fall, collide, and stack against an invisible floor; every load settles into a different pile. You can grab one and drag it, knock the others around, or flick it and launch it like a rocket. Labels nobody reads, made into something people play with. It renders on desktop only — on a phone there is no room to play, so it simply isn't there.",
         },
         {
           type: "figures",
@@ -96,16 +124,28 @@ const study: CaseStudy = {
           ],
         },
         {
+          type: "p",
+          text: "The About page header gets the same idea with a different mechanic: chips fall from above, and hovering one pops it like popcorn. Same purpose — make people read the labels by making them fun to touch.",
+        },
+        {
+          type: "figure",
+          figure: { src: "about-header", caption: "About, after the chips have landed under Daha fazla kontrol? — More control? Hover one and it pops" },
+        },
+        {
           type: "quote",
           text: "Moving fast shouldn't mean losing the human parts.",
         },
         {
           type: "p",
-          text: "Those pills are the part I actually care about. They cost a few hours, and they're the difference between a site that was generated and a site that was made. Elsewhere: a WebGL hero, a script-to-screen section that shows two scripts exactly as written — a morning in an Istanbul neighbourhood, a stadium going quiet — and a works grid holding a dozen film pieces.",
+          text: "Those pills are the part I actually care about. They cost a few hours, and they're the difference between a site that was generated and a site that was made. Elsewhere: a script-to-screen section that shows two scripts exactly as written — a morning in an Istanbul neighbourhood, a stadium going quiet — and the works grid with its fifteen pieces.",
+        },
+        {
+          type: "p",
+          text: "Script to Screen is the trust pattern of this category. Direct and indirect competitors all show the prompt next to the result, because it proves the studio's control over the output — that the frame was directed, not found. So VOLGEN shows it too: the script on the left, unedited, and the frame it produced on the right.",
         },
         {
           type: "figure",
-          figure: { src: "script-to-screen", caption: "Script to screen — the copy is the design" },
+          figure: { src: "script-to-screen", caption: "Script to screen: the FPV Drone script as written, and the frame it produced beside it" },
         },
       ],
     },
@@ -114,15 +154,7 @@ const study: CaseStudy = {
       blocks: [
         {
           type: "p",
-          text: "Three days with agents writing most of the code means most of my time went on reading, not typing. The models are fast and confident, and confident is the dangerous part: the mistakes aren't syntax errors, they're plausible components that do slightly the wrong thing. The defence is to read every diff as if a junior had written it, and to run the site in both languages after every change.",
-        },
-        {
-          type: "p",
-          text: "[NEEDS: the one thing that actually broke — what the agent got wrong, how you caught it, and what you changed]",
-        },
-        {
-          type: "p",
-          text: "What I'd do differently: write the bilingual content first and build against the longer language. And build the CRM flow before the pages, not after. It's the part with the most ways to fail quietly.",
+          text: "Three days with agents writing most of the code means most of my time went on reading, not typing. The models are fast and confident, and confident is the dangerous part: the mistakes aren't syntax errors, they're plausible components that do slightly the wrong thing. The defence is to read every diff as if a junior had written it, and to click through the whole site after every change.",
         },
       ],
     },

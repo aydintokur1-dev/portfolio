@@ -2,7 +2,7 @@ import type { CaseStudy } from "@/content/types";
 
 const study: CaseStudy = {
   slug: "morpa-ders",
-  title: "From matching to learning",
+  title: "Matching wasn't the product, learning was",
   org: "Morpa Ders",
   year: "2021",
   role: "Product Designer",

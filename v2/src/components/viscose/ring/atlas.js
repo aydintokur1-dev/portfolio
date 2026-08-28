@@ -201,14 +201,26 @@ const paintCell = (ctx, x, y, entry, i, theme) => {
  * before the site's fonts are necessarily in, so everything is repainted once
  * fonts settle — cosmetic, and gating nothing.
  */
-export function buildAtlas(entries = PROJECTS, onProgress) {
+export function buildAtlas(entries = PROJECTS, onProgress, { maxTextureSize = 4096 } = {}) {
   const cols = Math.ceil(Math.sqrt(entries.length));
   const rows = Math.ceil(entries.length / cols);
 
+  // Supersample the sheet. A cell is laid out at CELL_W logical pixels but a
+  // card on a retina display shows more device pixels than that, and a
+  // texture upscaled through the sampler reads as soft type. Paint at up to
+  // 2x, in quarter steps, bounded by what the GPU will hold in one texture.
+  const scale = Math.max(
+    1,
+    Math.min(2, Math.floor((maxTextureSize / (cols * CELL_W)) * 4) / 4, Math.floor((maxTextureSize / (rows * CELL_H)) * 4) / 4),
+  );
+
   const canvas = document.createElement("canvas");
-  canvas.width = cols * CELL_W;
-  canvas.height = rows * CELL_H;
+  canvas.width = Math.round(cols * CELL_W * scale);
+  canvas.height = Math.round(rows * CELL_H * scale);
   const ctx = canvas.getContext("2d");
+  // Every paint below works in logical cell coordinates; the transform
+  // persists across repaints (paintCell save/restores around its own work).
+  ctx.scale(scale, scale);
 
   const texture = new THREE.CanvasTexture(canvas);
   // The shader flips each cell itself, so leave the sheet as drawn.

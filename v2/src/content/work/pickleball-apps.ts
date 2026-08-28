@@ -4,18 +4,19 @@ const study: CaseStudy = {
   slug: "pickleball-apps",
   title: "Two apps, two platforms, every screen designed once",
   org: "Pickleball Native Apps",
-  year: "2024 – present",
+  year: "2026 – present",
   role: "Senior Product Designer",
   tint: "lavender",
   tier: "depth",
   gated: true,
   summary:
-    "The Leagues app and the Pickleball.com app started on the same day, and most of their screens were the same screens. So Baysal Sümer and I designed the shared pages once as common components, then built a native iOS library and a Material 3 library so every page ships in both platforms' own idiom. The same common screens and components will carry a third app, Pickleball Tournaments. It began as a port of the desktop; it ended with upper management asking the desktop to catch up to it.",
+    "The Leagues app and the Pickleball.com app started on the same day, and most of their screens were the same screens. So Baysal Sümer and I designed the shared pages once as common components, then built a native iOS library and a Material 3 library so every page lands in both platforms' own idiom. The same common screens and components will carry a third app, Pickleball Tournaments. It began as a port of the desktop; it ended with upper management asking the desktop to catch up to it.",
   facts: [
     { label: "Role", value: "Senior Product Designer" },
     { label: "With", value: "Baysal Sümer — the two of us built both libraries" },
     { label: "Scope", value: "Leagues app · Pickleball.com app · Tournaments app (next) · common screens · shared components" },
     { label: "Platform", value: "Native iOS · Android (Material 3)" },
+    { label: "Status", value: "In development — not yet released" },
   ],
   cover: "cover",
   sections: [
@@ -28,7 +29,7 @@ const study: CaseStudy = {
         },
         {
           type: "p",
-          text: "Then a second decision landed from upper management: the apps would be native, with iOS and Material 3 designs rather than one cross-platform look. That doubled the surface again. Two apps, two platforms, a small team — the only way the maths works is if a page is designed once and inherited everywhere.",
+          text: "Then a second decision came down: the apps would be native, with iOS and Material 3 designs rather than one cross-platform look. That doubled the surface again. Two apps, two platforms, a small team — the only way the maths works is if a page is designed once and inherited everywhere.",
         },
         {
           type: "stat",
@@ -65,11 +66,11 @@ const study: CaseStudy = {
       blocks: [
         {
           type: "p",
-          text: "The native decision meant one library wasn't enough. Baysal Sümer and I built two: an iOS library and a Material 3 library. We started from each platform's own components, customised them to the product, and where the platforms had nothing that fit — a score card, an H2H comparison, a league standings row — we designed new components by that platform's rules rather than by our own habit. Every page we shipped exists in both versions, and the pairs below are the proof: the same content, the same hierarchy, and the details each platform's users already know — the segmented control against the tabs, the grouped inset cards against the tonal surfaces, iOS's back chevron against Material's arrow.",
+          text: "The native decision meant one library wasn't enough. Baysal Sümer and I built two: an iOS library and a Material 3 library. We started from each platform's own components, customised them to the product, and where the platforms had nothing that fit — a score card, an H2H comparison, a league standings row — we designed new components by that platform's rules rather than by our own habit. Every page we delivered exists in both versions, and the pairs below are the proof: the same content, the same hierarchy, and the details each platform's users already know — the segmented control against the tabs, the grouped inset cards against the tonal surfaces, iOS's back chevron against Material's arrow.",
         },
         {
           type: "decision",
-          problem: "Upper management wanted the apps to feel native on each platform, not like one design wearing two icons.",
+          problem: "Leadership wanted the apps to feel native on each platform, not like one design wearing two icons.",
           constraint: "Two designers, and every page already has to serve two apps.",
           decision: "Two component libraries built side by side, each following its platform's rules — customised where the platform had a component, invented where it didn't.",
           outcome: "One design decision per page, two native renderings of it. Neither platform's users get the other's conventions.",
@@ -113,11 +114,11 @@ const study: CaseStudy = {
       ],
     },
     {
-      heading: "What shipped",
+      heading: "Where it stands",
       blocks: [
         {
           type: "p",
-          text: "Each pair is the same page: iOS on the left, Material 3 on the right. Scroll the frames — the differences are the platform's; the content, hierarchy and components are shared.",
+          text: "Designed and handed off; the apps are in development and not yet released. Each pair is the same page: iOS on the left, Material 3 on the right. Scroll the frames — the differences are the platform's; the content, hierarchy and components are shared.",
         },
         { type: "h3", text: "Two homes" },
         {

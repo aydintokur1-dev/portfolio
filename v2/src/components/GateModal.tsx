@@ -1,11 +1,11 @@
 "use client";
 
 import { Suspense, useEffect, useRef, useState, useSyncExternalStore, type FormEvent, type KeyboardEvent } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { AnimatePresence, motion, useAnimate } from "motion/react";
 import { getStudy } from "@/content/work";
 import { useReducedMotion } from "@/lib/use-reduced-motion";
-import { closeGate, getGate, getGateServer, openGate, safeNext, subscribeGate } from "@/lib/gate-client";
+import { closeGate, getGate, getGateServer, hasGateHint, openGate, safeNext, subscribeGate } from "@/lib/gate-client";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -38,6 +38,7 @@ const ENCORE = [
   "Respect. Now go read the email.",
 ];
 const OFFLINE = "The door didn't answer. Try once more.";
+const NO_COOKIE = "Right password — but this browser dropped the key. Allow cookies for this site and try again.";
 
 const EMAIL = "aydintokur1@gmail.com";
 
@@ -75,7 +76,6 @@ export function GateModal() {
 function Gate() {
   const { next } = useSyncExternalStore(subscribeGate, getGate, getGateServer);
   const open = next !== null;
-  const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
   const reduce = useReducedMotion();
@@ -176,12 +176,20 @@ function Gate() {
       status = 0;
     }
     if (status === 200) {
+      // The API said yes, but the proxy only trusts the cookie. If the browser
+      // refused it (cookies blocked for the site), say so instead of bouncing
+      // silently back to this door.
+      if (!hasGateHint()) {
+        miss(NO_COOKIE);
+        return;
+      }
       setUnlocked(true);
       setNote("[ OK ] That's the one. Opening ↗");
-      // A beat to read the OK before the page changes under the door.
+      // A beat to read the OK, then a full navigation: the fresh cookie goes
+      // with a fresh document, and a tab left open across a deploy can't get
+      // stuck replaying a stale client router.
       setTimeout(() => {
-        closeGate();
-        router.push(next);
+        window.location.assign(next);
       }, reduce ? 0 : 420);
       return;
     }

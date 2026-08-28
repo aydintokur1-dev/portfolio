@@ -248,9 +248,13 @@ export default function Carousel({ onOpen }) {
     const readyWaiters = [];
     const whenReady = (fn) => (launchReady ? fn() : readyWaiters.push(fn));
 
-    const atlas = buildAtlas(PROJECTS, (p) => {
-      if (!disposed) loadProg = p;
-    });
+    const atlas = buildAtlas(
+      PROJECTS,
+      (p) => {
+        if (!disposed) loadProg = p;
+      },
+      { maxTextureSize: renderer.capabilities.maxTextureSize },
+    );
 
     uniforms.uAtlas.value.dispose();
     atlas.texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
@@ -1619,12 +1623,45 @@ export default function Carousel({ onOpen }) {
     // display; a dozen of them inside a sixty-frame window is a machine that
     // cannot keep up at this ratio, so drop a quarter step and start
     // counting again. Floors at 1x.
+    //
+    // It only starts judging two seconds after launch settles: the first
+    // frames pay for shader compiles, the atlas upload and font repaints on
+    // every machine, and counting those stepped a retina display down to 1x
+    // before the ring had drawn once — permanently, since the ratio never
+    // climbs back. A single very long frame (a tab switch, a resize, GC) is
+    // ignored for the same reason: it is an event, not a rate.
+    //
+    // "Slow" is relative to the display's own cadence, not a fixed 30ms.
+    // Chrome's Energy Saver (low battery) and 30Hz displays hand rAF a
+    // 33ms beat with the GPU idle; against an absolute threshold every one
+    // of those frames looks missed and the ring steps to 1x within a second.
+    // A short empty-rAF probe at mount measures the beat before the ring
+    // draws; a frame is slow only when it clearly overruns it.
+    let cadence = 1000 / 60;
+    {
+      const ticks = [];
+      let last = performance.now();
+      const probe = () => {
+        const t = performance.now();
+        ticks.push(t - last);
+        last = t;
+        if (ticks.length < 24 && !disposed) requestAnimationFrame(probe);
+        else if (ticks.length) cadence = ticks.sort((x, y) => x - y)[ticks.length >> 1];
+      };
+      requestAnimationFrame(probe);
+    }
     let slowFrames = 0;
     let windowFrames = 0;
-    const noteFrame = (ms) => {
-      if (dprCap <= 1) return;
+    let judgeFrom = 0;
+    const noteFrame = (ms, now) => {
+      if (dprCap <= 1 || !launchReady || document.hidden) return;
+      if (judgeFrom === 0) {
+        judgeFrom = now + 2000;
+        return;
+      }
+      if (now < judgeFrom || ms > 250) return;
       windowFrames++;
-      if (ms > 30) slowFrames++;
+      if (ms > Math.max(30, cadence * 1.6)) slowFrames++;
       if (slowFrames >= 12) {
         dprCap = Math.max(1, dprCap - 0.25);
         renderer.setPixelRatio(dprCap);
@@ -1639,7 +1676,7 @@ export default function Carousel({ onOpen }) {
 
     const frame = () => {
       const now = performance.now();
-      noteFrame(now - prevT);
+      noteFrame(now - prevT, now);
       // Clamped, so a backgrounded tab does not resume with one huge step.
       const dt = Math.min(0.05, (now - prevT) / 1000);
       prevT = now;

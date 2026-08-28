@@ -69,6 +69,10 @@ export type Testimonial = {
   text: string;
   /** English translation when lang === "tr" */
   en?: string;
+  /** Verbatim sentence(s) from `text` to show on the card instead of the auto-cut opening. */
+  excerpt?: string;
+  /** Same, for `en`. */
+  excerptEn?: string;
 };
 
 export type Experience = {

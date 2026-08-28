@@ -20,7 +20,6 @@ export const art: Record<string, Art> = {
   volgen: { src: "/art/willow-road.webp", title: "Landscape with Path and Pollard Willows" },
   "balkan-transfer": { src: "/art/townscape.webp", title: "The Old Tower and Houses" },
   cuckoo: { src: "/art/field-diggers.webp", title: "Field with Figures Digging" },
-  innos: { src: "/art/sand-diggers.webp", title: "Sand Diggers in Dekkersduin near The Hague" },
   "morpa-kampus": { src: "/art/bridge-workers.webp", title: "Labourers on a Bridge" },
   "morpa-ders": { src: "/art/weaver.webp", title: "Weaver, Seen from the Front" },
 };

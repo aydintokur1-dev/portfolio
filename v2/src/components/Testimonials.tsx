@@ -7,17 +7,19 @@ import { InView } from "@/components/InView";
 
 const FEATURED = "Here's what my colleagues say about working with me.";
 
-/** First sentence or two, capped — marquee cards want excerpts, not essays. */
+/** First sentence or two, capped — marquee cards want excerpts, not essays.
+ *  Always ends on a sentence boundary: an over-long opening sentence is kept
+ *  whole rather than sliced mid-word. */
 function excerpt(text: string, max = 190): string {
   const flat = text.replace(/\n+/g, " ");
   if (flat.length <= max) return flat;
   const sentences = flat.split(". ");
   let out = "";
   for (const s of sentences) {
-    if ((out + s).length > max) break;
+    if (out && (out + s).length > max) break;
     out += s + ". ";
   }
-  return out.trim() || flat.slice(0, max) + "…";
+  return out.trim().replace(/\.\.$/, ".");
 }
 
 export function Testimonials() {
@@ -123,9 +125,9 @@ function Card({ t, hidden }: { t: Testimonial; hidden?: boolean }) {
       className="w-[min(84vw,420px)] shrink-0 rounded-[var(--r-card)] border border-[var(--hairline)] bg-[rgba(242,239,229,0.018)] p-6"
     >
       <blockquote className="t-body text-[var(--muted)]">
-        “{excerpt(t.text)}”
+        “{t.excerpt ?? excerpt(t.text)}”
         {t.lang === "tr" && t.en && (
-          <span className="t-body mt-3 block text-[var(--faint)]">EN — “{excerpt(t.en, 150)}”</span>
+          <span className="t-body mt-3 block text-[var(--faint)]">EN — “{t.excerptEn ?? excerpt(t.en, 150)}”</span>
         )}
       </blockquote>
       <figcaption className="t-label mt-5 text-[var(--faint)]">

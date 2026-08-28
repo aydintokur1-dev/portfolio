@@ -4,7 +4,7 @@ const study: CaseStudy = {
   slug: "pickleball-homepage",
   title: "Four front doors, one system",
   org: "Pickleball.com Homepages",
-  year: "2024 – 2025",
+  year: "2026",
   role: "Senior Product Designer",
   tint: "blue",
   tier: "depth",
@@ -14,6 +14,7 @@ const study: CaseStudy = {
   facts: [
     { label: "Role", value: "Senior Product Designer" },
     { label: "Scope", value: "Four homepages · Search · Listings, as one journey" },
+    { label: "Status", value: "In development — the live sites still run the previous design" },
     { label: "Goals", value: "Discoverability · perceived value · consistency" },
     { label: "Products", value: "4 of 6 — Tournaments · Team Leagues · Ladder Leagues · Clubs" },
   ],
@@ -24,7 +25,16 @@ const study: CaseStudy = {
       blocks: [
         {
           type: "p",
-          text: "Pickleball.com is a network of six products, and four of them — Tournaments, Team Leagues, Ladder Leagues and Clubs — have a homepage of their own (Pickleball.com itself and World Pickleball Rankings don't yet). A homepage inside a network like that has a harder job than most: it has to explain what the product is, surface the right entry point for very different players, and hand off into search without a seam. The old pages did the first job and quietly failed at the other two.",
+          text: "A homepage inside a network has a harder job than most: it has to explain what the product is, surface the right entry point for very different players, and hand off into search without a seam. The old pages did the first job and quietly failed at the other two.",
+        },
+        {
+          type: "stat",
+          items: [
+            { value: "1K+", label: "active tournaments on the network these pages front" },
+            { value: "6K+", label: "active clubs" },
+            { value: "340+", label: "active leagues" },
+            { value: "50+", label: "active team leagues" },
+          ],
         },
         {
           type: "p",
@@ -44,7 +54,7 @@ const study: CaseStudy = {
           problem: "Redesigning the homepage alone would polish the entrance to an unchanged journey.",
           constraint: "Four product teams ship continuously; nothing pauses for a redesign.",
           decision: "Expand V2 to Homepage + Search + Listings as one system, built from the shared components.",
-          outcome: "Better discoverability and perceived value, with consistency across products instead of one improved page.",
+          outcome: "The attention hierarchy was validated during design with predictive attention heat maps, and the card and search components built in this pass were adopted across the platform and became the standard.",
         },
       ],
     },
@@ -69,7 +79,7 @@ const study: CaseStudy = {
           problem: "The ad slot was the first element on the page, and a heavy creative made the buttons under it almost invisible.",
           constraint: "The ad couldn't go — it just couldn't go first.",
           decision: "A header with an image behind it — AI-generated in the product's own colours, with enough movement to feel alive — carrying the title, the actions and the search. The ad moves directly below it.",
-          outcome: "Every element in the header reads clearly. The ad is still above the fold; it just isn't the headline.",
+          outcome: "Every element in the header reads clearly — checked against predictive attention heat maps before handoff. The ad is still above the fold; it just isn't the headline.",
         },
         { type: "h3", text: "Make the page theirs" },
         {
@@ -122,11 +132,11 @@ const study: CaseStudy = {
       ],
     },
     {
-      heading: "What shipped",
+      heading: "Where it stands",
       blocks: [
         {
           type: "p",
-          text: "The four homepages, top to bottom. Scroll any one of them and you're reading the same page; the differences are the product's.",
+          text: "Handed off and in development; the live sites still run the previous design. Here are the four homepages, top to bottom. Scroll any one of them and you're reading the same page; the differences are the product's.",
         },
         {
           type: "figure",
@@ -134,15 +144,15 @@ const study: CaseStudy = {
         },
         {
           type: "figure",
-          figure: { src: "team-leagues", caption: "Team Leagues — featured, MLP, associations and partners", frame: "full" },
+          figure: { src: "team-leagues", caption: "Team Leagues — header with quick search, ad moved below, my leagues and invitations, featured leagues, MLP, associations and partners", frame: "full" },
         },
         {
           type: "figure",
-          figure: { src: "ladder-leagues", caption: "Ladder Leagues — featured leagues and what's playing now", frame: "full" },
+          figure: { src: "ladder-leagues", caption: "Ladder Leagues — header with quick search, ad moved below, my leagues and invitations, featured leagues and what's playing now", frame: "full" },
         },
         {
           type: "figure",
-          figure: { src: "clubs", caption: "Clubs", frame: "full" },
+          figure: { src: "clubs", caption: "Clubs — header with keyword and location search, ad moved below, my events and invitations, trending clubs nearby, featured clubs", frame: "full" },
         },
       ],
     },

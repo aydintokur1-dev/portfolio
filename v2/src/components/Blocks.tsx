@@ -73,7 +73,7 @@ function BlockView({ b, slug }: { b: Block; slug: string }) {
 
     case "stat":
       return (
-        <dl className="my-4 grid gap-8 border-y border-[var(--hairline)] py-8 sm:grid-cols-3">
+        <dl className={`my-4 grid gap-8 border-y border-[var(--hairline)] py-8 ${b.items.length === 4 ? "sm:grid-cols-2 lg:grid-cols-4" : "sm:grid-cols-3"}`}>
           {b.items.map((s) => (
             <div key={s.label}>
               <dd className="t-display stat-tick order-first text-[clamp(2rem,3.4vw,3.2rem)]">{s.value}</dd>
