@@ -31,8 +31,8 @@ export function Contact() {
           <a href="https://www.linkedin.com/in/ayd%C4%B1n-tokur/" target="_blank" rel="noreferrer" className="pill t-label text-[var(--ink)]">
             LinkedIn <span className="arr" aria-hidden>↗</span>
           </a>
-          <a href="mailto:aydintokur1@gmail.com?subject=CV%3F" className="pill t-label text-[var(--ink)]">
-            Ask for the CV <span className="arr" aria-hidden>↗</span>
+          <a href="/Aydin_Tokur_CV.pdf" download="Aydin_Tokur_CV.pdf" className="pill t-label text-[var(--ink)]">
+            Download CV <span className="arr arr-d" aria-hidden>↓</span>
           </a>
         </div>
       </InView>

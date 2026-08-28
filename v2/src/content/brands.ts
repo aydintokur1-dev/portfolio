@@ -10,7 +10,6 @@ export const brands: Brand[] = [
   { name: "Agency Look", slug: "agency-look", period: "2022" },
   { name: "Morpa", slug: "morpa", period: "2021 – 2022" },
   { name: "Akbank", slug: "akbank" },
-  { name: "DenizBank", slug: "denizbank" },
   { name: "Fibabanka", slug: "fibabanka" },
   { name: "Allianz", slug: "allianz" },
   { name: "Tmob AI Studio", slug: "tmob-ai-studio" },
