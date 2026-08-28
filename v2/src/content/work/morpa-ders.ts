@@ -13,7 +13,7 @@ const study: CaseStudy = {
   facts: [
     { label: "Role", value: "Product Designer" },
     { label: "Team", value: "Art director, product, engineering" },
-    { label: "Timeline", value: "Jun 2021 – Mar 2022" },
+    { label: "Timeline", value: "2021" },
     { label: "Platform", value: "Web" },
     { label: "Tools", value: "Figma, Miro" },
   ],

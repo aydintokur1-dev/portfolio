@@ -149,15 +149,6 @@ const study: CaseStudy = {
         },
       ],
     },
-    {
-      heading: "What broke",
-      blocks: [
-        {
-          type: "p",
-          text: "Three days with agents writing most of the code means most of my time went on reading, not typing. The models are fast and confident, and confident is the dangerous part: the mistakes aren't syntax errors, they're plausible components that do slightly the wrong thing. The defence is to read every diff as if a junior had written it, and to click through the whole site after every change.",
-        },
-      ],
-    },
   ],
 };
 

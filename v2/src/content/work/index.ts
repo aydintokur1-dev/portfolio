@@ -1,6 +1,5 @@
 import type { CaseStudy } from "@/content/types";
 
-import pickleball from "./pickleball";
 import pickleballHomepage from "./pickleball-homepage";
 import pickleballTournaments from "./pickleball-tournaments";
 import pickleballApps from "./pickleball-apps";
@@ -13,7 +12,6 @@ import morpaDers from "./morpa-ders";
 
 /** All case studies, in display order. */
 export const studies: CaseStudy[] = [
-  pickleball,
   pickleballTournaments,
   pickleballHomepage,
   pickleballApps,
