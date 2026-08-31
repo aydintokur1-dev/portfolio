@@ -7,7 +7,7 @@
  * every request. This only decides whether a click opens the modal or
  * goes straight through.
  */
-export const GATED_SLUGS = ["pickleball-homepage", "pickleball-apps"];
+export const GATED_SLUGS = ["pickleball-tournaments", "pickleball-homepage", "pickleball-apps"];
 export const GATE_COOKIE = "pf_gate";
 /** Readable twin of the httpOnly cookie. Carries no secret, only "1". */
 export const GATE_HINT_COOKIE = "pf_gate_ok";
