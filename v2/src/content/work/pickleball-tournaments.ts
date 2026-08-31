@@ -13,6 +13,7 @@ const study: CaseStudy = {
   role: "Senior Product Designer",
   tint: "yellow",
   tier: "depth",
+  gated: true,
   summary:
     "The tournament page is everything a player needs to know about an event, in one place: when, where, what it costs, how to register, who's playing, who needs a partner, the results, the videos. I redesigned all thirteen of its tabs — five are shown here — and, before any of that, rebuilt the Figma file so the team could find the latest design and every state it has to cover. One button on it cut misdirected support messages by 90%. The platform behind it has hosted 22,000+ tournaments and 4M+ matches; this page is where every one of them starts.",
   facts: [
